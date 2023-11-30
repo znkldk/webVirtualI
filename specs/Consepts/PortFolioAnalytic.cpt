@@ -1,0 +1,21 @@
+Created by znkldk on 26.04.2022
+
+This is a concept file with following syntax for each concept.
+# PortFolio Click Coordinat Save Btn
+* Wait "1" seconds
+* Click Button With Text "Select"
+* Wait "1" seconds
+
+# PortFolio open location window
+* Wait "1" seconds
+* Click to "ID-Location-Icon"
+* Wait "2" seconds
+* Fail if "ID-Location-Icon" is NOT exist fail message "coordinate"
+
+# Portfolio check filter btn
+* Click Button With Text "Hide Filter"
+* Wait "1" seconds
+* Fail if "Portfolio-Query-Btn" is exist fail message "filter does not work"
+* Click Button With Text "Show Filter"
+* Wait "1" seconds
+* Fail if "Portfolio-Query-Btn" is NOT exist fail message "filter does not work"

@@ -1,0 +1,40 @@
+Created by znkldk on 3.01.2022
+
+This is a concept file with following syntax for each concept.
+# Create new risk engineer
+* Create an email and write then record this mail
+* Write "Otomasyon" to "RiskEng-FirstName-TxtBox"
+* Write "Test" to "RiskEng-LastName-TxtBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Write "123123" to "RiskEng-Password-TxtBox"
+* Write "123123" to "RiskEng-ConfPassword-TxtBox"
+* Click to "RiskEng-Save-Btn"
+Does Success Message Appear if not Fail message "Cant create New Risk Engineer"
+
+
+
+# Create new risk engineer with Wrong Mail
+* Write "Otomasyon" to "RiskEng-FirstName-TxtBox"
+* Write "Test" to "RiskEng-LastName-TxtBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Write "buBirMaildir@mail.com" to "RiskEng-Email-TxtBox"
+* Write "123123" to "RiskEng-Password-TxtBox"
+* Write "123123" to "RiskEng-ConfPassword-TxtBox"
+* Click to "RiskEng-Save-Btn"
+* Does Error Message Appear id not Fail message= "Already used mail adress does not cause an error!!!"
+
+# Open Engineer Detail
+* Click to "RiskEng-YeniEkle-Btn"
+* Fail if "RiskEng-FirstName-TxtBox" is NOT exist fail message "Engineer Detail did not open"
+
+# Engineer Detail Check All error messages
+*Click to "RiskEng-Save-Btn"
+* Wait "1" seconds
+* Fail if "RiskEng-FirstName-TxtBox-Err" is NOT exist fail message "Error messages did not appear"
+* Fail if "RiskEng-LastName-TxtBox-Err" is NOT exist fail message "Error messages did not appear"
+* Fail if "RiskEng-Phone-TxtBox-Err" is NOT exist fail message "Error messages did not appear"
+* Fail if "RiskEng-Email-TxtBox-Err" is NOT exist fail message "Error messages did not appear"
+* Fail if "RiskEng-Password-TxtBox-Err" is NOT exist fail message "Error messages did not appear"
+* Fail if "RiskEng-ConfPassword-TxtBox-Err" is NOT exist fail message "Error messages did not appear"
+
+

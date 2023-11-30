@@ -1,0 +1,49 @@
+setCall,xpath,"//*[@type=""button""]//*[contains(@class,'search')]"
+SetCall-ContactName-TextBox,xpath,"//label[.='Contact Name']/..//*[@class=""el-form-item__content""]//input"
+SetCall-CompanyName-TextBox,xpath,"//label[.='Company Name']/..//*[@class=""el-form-item__content""]//input"
+SetCall-Client ID-TextBox,xpath,"//label[.='Client ID']/..//*[@class=""el-form-item__content""]//input"
+SetCall-StartCAll-Btn,xpath,"//*[@type=""button""]//*[.='Start Call']"
+SetCall-SetCallDirectly-CheckBox,xpath,"//*[@role=""radiogroup""][1]//span[.='Set Call Directly']"
+SetCall-SetCallWithEngineers-CheckBox,xpath,"//*[@role=""radiogroup""][1]//span[contains(text(),'Engineer')]"
+SetCall-SetCallWithClient-CheckBox,xpath,"//*[@role=""radiogroup""][1]//span[.='Set Call with Client']"
+SetCall-SetCallDirectly-ControlChecked,xpath,"//*[@role=""radiogroup""][1]//*[@class=""el-radio is-checked""]/span[.='Set Call Directly']"
+SetCall-Language-DropDown,xpath,"//*[@placeholder=""Select""]"
+SetCall-Notes-Textbox,xpath,"//*[.='Notes']/.//*[@class=""el-textarea__inner""]"
+SetCall-CopyLink-CheckBox,xpath,"//*[@role=""radiogroup""][1]//span[.='Copy Link']"
+SetCall-SendSms-CheckBox,xpath,"//*[@role=""radiogroup""][1]//span[.='Send SMS']"
+SetCall-SendEmail-CheckBox,xpath,"//*[@role=""radiogroup""][1]//span[.='Send Email']"
+SetCall-CopyLink-ControlChecked,xpath,"//*[@role=""radiogroup""][1]//*[@class=""el-radio is-checked""]/span[.='Copy Link']"
+SetCall-ContactName-Err,xpath,"//*[.='Contact Name']/..//div[@class=""el-form-item__error""]"
+SetCall-MessageContent-TxtBox,xpath,"//*[contains(text(),'Message Content')]/..//*[@class=""el-textarea__inner""]"
+SetCall-Contact Email-TextBox,xpath,"//*[contains(text(),'E-mail')]/..//*[@class=""el-input__inner""]"
+SetCall-Contact Email-Err,xpath,"//*[contains(text(),'E-mail')]/..//div[@class=""el-form-item__error""]"
+SetCall-ContactPhone-Err,xpath,"//*[contains(text(),'Please enter a valid cell phone')]/..//div[@class=""el-form-item__error""]"
+SetCall-Contact Phone-TextBox,xpath,"//*[@name=""telephone""]"
+SetCall-Engineer-TextBox,xpath,"(//*[@placeholder=""Type in to filter engineers""])[last()]"
+SetCall-Client-Textbox,xpath,"//*[@placeholder=""Type in to search clients""]"
+SetCall-Engineer-Err,xpath,"//*[.='Engineer']/..//div[@class=""el-form-item__error""]"
+SetCall-ClientId-Err,xpath,"//*[.='Client ID']/..//div[@class=""el-form-item__error""]"
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,

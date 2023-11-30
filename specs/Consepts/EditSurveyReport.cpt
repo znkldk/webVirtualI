@@ -1,0 +1,91 @@
+Created by znkldk on 13.12.2021
+
+This is a concept file with following syntax for each concept.
+# Go to Edit Survey Report
+*Wait "10" seconds
+* Click to "ESR-ESR-Btn"
+* Fail if "ESR-inspectionDetail-Title" is NOT exist fail message "inspectionDetail page did not open"
+* Click to "EST-Agree-Btn"
+
+# Select Last Three Months From Calendar
+* Click to "ESR-Celendar-icon"
+* Click to "ESR-Last3Mounth-Text"
+* Wait "1" seconds
+
+# Inspection Check Celendar
+* Click to "ESR-Celendar-icon"
+* Fail if "ESR-LastWeek-Text" is NOT exist fail message "Survey celendar"
+* Fail if "ESR-LastMounths-Text" is NOT exist fail message "Survey celendar"
+* Fail if "ESR-Last3Mounth-Text" is NOT exist fail message "Survey celendar"
+
+# Share The Inspection
+* Wait "2" seconds
+* Click to "ID-Share-Btn"
+* Wait "2" seconds
+* Inspection Detail Share form and record link and password
+
+# open share with email
+* Click to "ID-Share-Btn"
+* Click to "ID-Send-Btn"
+* Click to "ID-Email-Checkbox"
+
+# Open Share with Sms
+* Click to "ID-Share-Btn"
+* Wait "2" seconds
+* Inspection Detail Share form and record link and password
+* Click to "ID-Send-Btn"
+* Click to "ID-Sms-Checkbox"
+
+# Share with email blank
+* open share with email
+* Click to "ID-Send E-Mail-Btn"
+* Wait "1" seconds
+*Fail if "SetCall-Contact Email-Err" is NOT exist fail message "E- mail cant be blank"
+
+# Share with Sms blank
+* Open Share with Sms
+* Click to "ID-Send Sms-Btn"
+* Wait "1" seconds
+*Fail if "SetCall-ContactPhone-Err" is NOT exist fail message "Sms cant be blank"
+
+# Share With Email
+* Write "cdknn.test@inbox.testmail.app" to "SetCall-Contact Email-TextBox"
+* Click to "ID-Send E-Mail-Btn"
+* Check Email with text "Code:"
+
+# Share With Sms
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Click to "ID-Send Sms-Btn"
+* Wait "1" seconds
+* Does Success Message Appear if not Fail message "Unsuccesfull send sms!!"
+
+# Inspection Stop Share
+* Wait "2" seconds
+* Click to "ID-StopShare-Btn"
+* Wait "1" seconds
+* Click to "ID-PupUpYes-Btn"
+* Wait "4" seconds
+* Fail if "ID-sharedIcon-Control" is exist fail message "Shared icon did not disappear"
+
+# Open last shared inspection detail
+* Wait "3" seconds
+* Go to Shared link and enter The Password
+* Click to "Share-Go-Btn"
+* Wait "20" seconds
+* If key exist Click to "EST-Agree-Btn"
+
+# Open stopped shared inspection detail
+* Wait "3" seconds
+* Go to Shared link and enter The Password
+* Click to "Share-Go-Btn"
+* Wait "20" seconds
+* Click with js id "CybotCookiebotDialogBodyButtonAccept"
+* Fail if "EST-Agree-Btn" is exist fail message "Stopped shared form is reachable"
+
+# Last Inspection has a chart icon
+* Fail if "ESR-Chart-btn" is NOT exist fail message "A finalized Inspection does not have a Chart icon"
+
+# Last Inspection Click chart icon
+* Click to "ESR-Chart-btn"
+* Wait "10" seconds
+

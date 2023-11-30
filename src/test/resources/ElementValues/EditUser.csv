@@ -1,0 +1,13 @@
+editUser,xpath,"//*[@type=""button""]//*[contains(@class,'search')]ew__________________________"
+EditUser-Firstuser-TextBox,xpath,"//*[@placeholder=""First Name""]"
+EditUser-LastName-TextBox,xpath,"//*[@placeholder=""Last Name""]"
+EditUser-PhoneNumber-TextBox,xpath,"//*[@placeholder=""Enter a phone number""]"
+EditUser-TimeZone-Dd,xpath,"//*[@for=""time_zone""]/..//*[@placeholder=""Select""]"
+EditUser-NewPassword-TextBox,xpath,"//*[@autocomplete=""new-password""]"
+EditUser-ConfirmPassword-TextBox,xpath,"//*[.='Confirm New Password']//*[@type=""password""]"
+EditUser-Save-Btn,xpath,"//*[@class=""fa fa-save""]"
+EditUser-Close-Btn,xpath,"//*[@type=""button""]//*[.='Close']"
+EditUser-Close-Icon,xpath,"//*[@aria-label=""Edit User""]//*[@class=""el-dialog__headerbtn""]//*[@class=""el-dialog__close el-icon el-icon-close""]"
+Edituser-Name-Text,xpath,"//*[contains(@class,'user-name')]"
+EditUser-CurrentPassword-TextBox,xpath,"//*[.='Current Password']//*[@type=""password""]"
+,,

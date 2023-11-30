@@ -1,0 +1,60 @@
+Created by znkldk on 14.04.2022
+
+This is a concept file with following syntax for each concept.
+# Chart Files Check All Grid Buttons
+* Check Btn with tag on grid "download" "image"
+* Check Btn with tag on grid "tag" "image"
+* Check Btn with tag on grid "trash" "image"
+* Check Btn with tag on grid "download" "video"
+* Check Btn with tag on grid "tag" "video"
+* Check Btn with tag on grid "trash" "video"
+* Check Btn with tag on grid "download" "doc"
+* Check Btn with tag on grid "tag" "doc"
+* Check Btn with tag on grid "trash" "doc"
+* Check Btn with tag on grid "download" "audio"
+* Check Btn with tag on grid "tag" "audio"
+* Check Btn with tag on grid "trash" "audio"
+
+# Chart Files Check Buttons Out of grid
+* Check Button With Text "Browse File"
+* Check Button With Text "Download All"
+* Check Button With Text "Download Report"
+
+# Chart Add new tag <text>
+*Click to "CAllhistory-NewTag-Btn"
+* Write <text> to "Callhistory-newTag-TextBox"
+* Click to "CallHistory-Save-Btn"
+* Wait "1" seconds
+* Does Grid Has the text <text>
+
+# Chart delete tag
+* Click to "CAllHistory-Deletetag-btn"
+* Wait "4" seconds
+* Click to "CallHistory-Save-Btn"
+* Wait "1" seconds
+
+# Chart Share Report
+* CallHistory open Share Menu
+* Inspection Detail Share form and record link and password
+
+# Chart open shared call history
+* Wait "4" seconds
+* Go to Shared link and enter The Password
+* Click to "Share-Go-Btn"
+* Wait "20" seconds
+* Click with js id "CybotCookiebotDialogBodyButtonAccept"
+* Wait "4" seconds
+* Click to "EST-Agree-Btn"
+
+# Chart Shared Report Page Elements Control
+* Check Button With Text "Download Report"
+
+# Chart Share Check form content
+* Click to "ID-POLICY SY-btn"
+* Click to "ID-SURVEYLOCATİON-btn"
+
+# Chart Share Image Check
+* Wait "1" seconds
+* Click to "IDChart-ShareImg-Img"
+* Wait "1" seconds
+* Fail if "IDChart-ShareImg-BigImg" is NOT exist fail message "-"

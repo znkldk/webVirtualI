@@ -1,0 +1,13 @@
+prosada,xpath,"//*[@type=""button""]//*[contains(@class,'search')]"
+Profil-UzerName-Text,xpath,"//*[@class=""my-5px user-name""]"
+Profil-FirstName-TxtBox,xpath,"//*[@placeholder=""First Name""]"
+Profil-SAve-Btn,xpath,"//*[@class=""fa fa-save""]"
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,

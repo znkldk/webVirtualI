@@ -1,0 +1,133 @@
+Created by znkldk on 27.01.2022
+
+This is a concept file with following syntax for each concept.
+# Clients Open New Client Page
+* Click Button With Text "Add New"
+* Fail if "Clients-Name-TextBox" is NOT exist fail message "New Client page did not open"
+
+# Client Open new Address window
+* Click Button With Text "New Address"
+* Wait "1" seconds
+* Fail if "Clients-Address-Tab" is NOT exist fail message "new address window did not open"
+
+# Client Open Location Tab
+* Click to "Client-location-tab"
+* Wait "1" seconds
+* Fail if "MapPin" is NOT exist fail message "map is not proper please check it"
+
+# Client Seleckt <location> on map
+* Google Map Select From Dropdawn <location>
+
+# Client Check Filter for <text>
+* Write <text> to "Clients-Filter-TextBox"
+* Wait "2" seconds
+* Does All Grid Lines Has The <text> if not fail "filter does not work properly"
+
+# Client open address tab
+* Click to "Clients-Address-Tab"
+* Fail if "Clients-ShortName-TextBox" is NOT exist fail message "Address tab did not open"
+
+# Client fill Address tab
+* Wait "1" seconds
+* Write "ShortName" to "Clients-ShortName-TextBox"
+* Write "adress" to "Clients-AdressLine1-TxtBox"
+* Write "adress2" to "Clients-AdressLine2-TxtBox"
+* Write "country" to "Clients-Country-TextBox"
+* Write "city" to "Clients-City-TextBox"
+* Write "District" to "Clients-District-TextBox"
+* Click Button With Text "Save Address"
+
+# Client fill Address tab second
+* Wait "1" seconds
+* Write "ShortNameSecond" to "Clients-ShortName-TextBox"
+* Write "adress" to "Clients-AdressLine1-TxtBox"
+* Write "adress2" to "Clients-AdressLine2-TxtBox"
+* Write "country" to "Clients-Country-TextBox"
+* Write "city" to "Clients-City-TextBox"
+* Write "District" to "Clients-District-TextBox"
+* Click Button With Text "Save Address"
+
+# Client Fill Name 
+* Write "rank" to "Clients-Name-TextBox"
+
+# Client refresh page
+* Click to "Client-Refrest-Btn"
+* Wait "1" seconds
+
+# Client Save Client
+* Click Button With Text "Save Client"
+* Wait "1" seconds
+
+# Client Click Inactive Checkbox and open first client details and check it
+* Click to "Client-ShowInactif-CheckBox"
+* Wait "2" seconds
+* Click Btn with text on grid "Edit" ""
+* Fail if "Client-AktiveOn-Swich" is exist fail message "Client must be inaktive"
+
+# Client Click Save Btn
+* Click Button With Text "Save Client"
+
+# Client Industry Dropdown Control
+* Wait "1" seconds
+* Choose "Hotels" from "Client-CustomerIndustry-Dd" dropdown
+* Wait "1" seconds
+* Choose "Jails" from "Client-CustomerIndustry-Dd" dropdown
+* Wait "1" seconds
+* Choose "Adult Day Care" from "Client-CustomerIndustry-Dd" dropdown
+
+# Client Industry Dropdown Write Control
+* Dropdown search test from "Client-CustomerIndustry-Dd" "Jails"
+
+# Make Client inactive
+* Wait "1" seconds
+* Click to "Client-Switch-Toogle"
+* Wait "1" seconds
+* Fail if "Client-AktiveOn-Swich" is exist fail message "Toggle did not work"
+
+# Make Client active
+* Wait "1" seconds
+* Click to "Client-Switch-Toogle"
+* Wait "2" seconds
+* Fail if "Client-AktiveOn-Swich" is NOT exist fail message "Toggle did not work"
+
+# Client open ShowInactif
+* Wait "3" seconds
+* Click to "Client-ShowInactif-CheckBox"
+* Wait "1" seconds
+
+# Click Close Btn
+* Wait "1" seconds
+* Click to "Client-MainClose-Btn"
+* Wait "1" seconds
+
+# Client New Adress Window Industy Type select <value>
+* Wait "1" seconds
+* Choose <value> from "AdresWind-IndustryType-dd" dropdown
+* Wait "1" seconds
+
+# Client Click Next Btn
+* Click Button With Text "Next"
+* Wait "1" seconds
+
+# Client Click upgrade adres with location btn
+* Wait "1" seconds
+* Write "ShortName" to "Clients-ShortName-TextBox"
+* Click Button With Text "Update Address using Location"
+* Wait "3" seconds
+
+# Cleint Save Adress
+* Click Button With Text "Save Address"
+
+# Client Open Adres Edit window
+* Wait "2" seconds
+* Click to "Cliend-EditAdress-Btn"
+* Wait "1" seconds
+* Fail if "Clients-Address-Tab" is NOT exist fail message "new address window did not open"
+* Click to "Clients-Address-Tab"
+* Wait "1" seconds
+
+# Client Delete Address
+* Wait "1" seconds
+* Click to "Client-DeleteAddress-Btn"
+* Wait "1" seconds
+* Fail if "Client-BosAddress-Check" is NOT exist fail message "Delete Address Has an ıssue"

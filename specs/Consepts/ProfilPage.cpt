@@ -1,0 +1,11 @@
+Created by znkldk on 5.01.2022
+
+This is a concept file with following syntax for each concept.
+# Open Profil Window
+* Click to "Profil-UzerName-Text"
+* Fail if "Profil-FirstName-TxtBox" is NOT exist fail message "Profil Page did not open"
+
+# Profil Page Change Name
+* Write text That in Txt to "Profil-FirstName-TxtBox"
+* Click to "Profil-SAve-Btn"
+* Does Success Message Appear if not Fail message "Some Error appaers when chancing name"

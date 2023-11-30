@@ -1,0 +1,256 @@
+Created by znkldk on 5.01.2022
+
+This is a concept file with following syntax for each concept.
+# Start a Call With Copied Link
+* Write "Contact Name" to "SetCall-ContactName-TextBox"
+* Click to "SetCall-StartCAll-Btn"
+* Wait "5" seconds
+* Open The Current Tab
+
+# Start A Call With Engineers Coppy Link
+* Choose "test" from "SetCall-Engineer-TextBox" dropdown
+* Click to "SetCall-StartCAll-Btn"
+* Wait "5" seconds
+* Open The Current Tab
+* Wait "5" seconds
+
+# Start A Call With Client Coppy Link
+* Write "b" to "SetCall-Client-Textbox"
+* Wait "2" seconds
+* Choose "a" from "SetCall-Client-Textbox" dropdown
+* Click to "SetCall-StartCAll-Btn"
+* Wait "5" seconds
+* Open The Current Tab
+* Wait "5" seconds
+
+# Start A Call With Email
+* Write "Contact Name" to "SetCall-ContactName-TextBox"
+Fill Message Content with uniq content
+* Click to "SetCall-SendEmail-CheckBox"
+* Write "cdknn.test@inbox.testmail.app" to "SetCall-Contact Email-TextBox"
+* Click to "SetCall-StartCAll-Btn"
+* Wait "5" seconds
+* Open The Current Tab
+* Wait "5" seconds
+
+# Answer The Call
+* Get The Call link And Answer It
+* Wait "3" seconds
+* If key exist Click to "Call-launchBtn-Btn"
+* Wait "1" seconds
+* Click to "Call-Accept-Btn"
+* Wait "10" seconds
+* Click with js id "CybotCookiebotDialogBodyButtonAccept" if exist
+* Fail if "Call-Video-Check" is NOT exist fail message "Some Thing go Wrong with video Call!!!"
+
+# Answer The Call Location
+* Get The Call link And Answer It New Window
+* Click to "Call-Accept-Btn"
+* Wait "10" seconds
+* Fail if "Call-Video-Check" is NOT exist fail message "Some Thing go Wrong with video Call!!!"
+
+# Take an Video Record
+* Press Video Record Btn
+* Wait "2" seconds
+* Fail if "Call-Recording-Text" is NOT exist fail message "Record does not start properly please Check it"
+* Fail if "Call-StopRecording-Btn" is NOT exist fail message "Stop Record Btn Does not Found"
+* Wait "10" seconds
+* Press Video Stop Record Btn
+* Wait "2" seconds
+ Does Success Message Appear if not Fail message "Video Record Does Not Stop Successfully"
+
+# Take an Video Record Comford
+* Press Video Record Btn Comford
+* Wait "2" seconds
+ Does Success Message Appear if not Fail message "Video Record Does Not Start Successfully"
+
+* Wait "10" seconds
+* Press Video Stop Record Btn Comford
+* Wait "2" seconds
+ Does Success Message Appear if not Fail message "Video Record Does Not Stop Successfully"
+
+#Press Video Record Btn
+* Click to "Call-First Video-Cam"
+* Hover element "Call-Recorder-Btn"
+* Wait "1" seconds
+* Click to "Call-Recorder-Btn"
+
+#Press Video Stop Record Btn
+* Click to "Call-First Video-Cam"
+* Hover element "Call-StopRecording-Btn"
+* Wait "1" seconds
+* Click to "Call-StopRecording-Btn"
+
+#Press Video Record Btn Comford
+* Hover element "Call-Recorder-Btn"
+* Wait "1" seconds
+* Click to "Call-Recorder-Btn"
+
+#Press Video Stop Record Btn Comford
+* Hover element "Call-StopRecording-Btn"
+* Wait "1" seconds
+* Click to "Call-StopRecording-Btn"
+
+# Call Page Open the rigtside bar
+*Click to "Call-RightArrow-Btn"
+*Wait "2" seconds
+* Fail if "CAll-VideosCallDriveOpen-Control" is NOT exist fail message "Call video call drive window did not open!!!"
+
+# Check Screenshot
+* Fail if "Call-SnapShot-Img" is NOT exist fail message "Cant take A ScreenShot"
+* Fail if "Call-SnapShotTag-Btn" is NOT exist fail message "Can find Tag Btn on Img"
+* Fail if "Call-SnapShotDownload-Btn" is NOT exist fail message "Can find Download Btn on Img"
+* Fail if "Call-SnapShotTrash-Btn" is NOT exist fail message "Can find Trash Btn on Img"
+* Click to "Call-SnapShot-Img"
+* Wait "2" seconds
+* Fail if "Call-Image-img" is NOT exist fail message "Big Image did not open"
+* Click with js "Call-VideoClose-Btn"
+* Fail if "Call-Image-img" is exist fail message "Big Image did not close"
+
+# Check Video Record
+* Fail if "Call-VideoRecord-Video" is NOT exist fail message "No video found on Video Call Drive"
+* Fail if "CAll-VideoTag-Btn" is NOT exist fail message "Can find Tag Btn on VİDEO"
+
+ Fail if "Call-SnapShotDownload-Btn" is NOT exist fail message "Can find Download Btn on VİDEO"
+ 
+* Fail if "Call-SnapShotTrash-Btn" is NOT exist fail message "Can find Trash Btn on VİDEO"
+* Click to "Call-VideoRecord-Video"
+* Fail if "Call-Video-player" is NOT exist fail message "Video Did not open"
+* Wait "4" seconds
+* Click with js "Call-VideoClose-Btn"
+* Wait "2" seconds
+* Fail if "Call-Video-player" is exist fail message "Video Did not close"
+
+# Call Delete Content
+* Click to "Call-SnapShotTrash-Btn"
+* Click to "Call-PopupYes-Btn"
+* Wait "2" seconds
+* Fail if "Call-SnapShotTrash-Btn" is exist fail message "Unsuccess delete content!!!"
+
+# set CAll Check page
+* Fail if "SetCall-SetCallDirectly-ControlChecked" is NOT exist fail message "Set Call Directly is not checked!!!"
+* Fail if "SetCall-SetCallDirectly-CheckBox" is NOT exist fail message "SetCall-SetCallDirectly-CheckBox Cant found On setcall Page"
+* Fail if "SetCall-SetCallWithEngineers-CheckBox" is NOT exist fail message "SetCall-SetCallWithEngineers-CheckBox  Cant found On setcall Page"
+* Fail if "SetCall-SetCallWithClient-CheckBox" is NOT exist fail message "SetCall-SetCallWithClient-CheckBox  Cant found On setcall Page"
+* Fail if "SetCall-ContactName-TextBox" is NOT exist fail message "SetCall-ContactName-TextBox  Cant found On setcall Page"
+* Fail if "SetCall-CompanyName-TextBox" is NOT exist fail message "SetCall-CompanyName-TextBox  Cant found On setcall Page"
+* Fail if "SetCall-Client ID-TextBox" is NOT exist fail message "SetCall-Client ID-TextBox  Cant found On setcall Page"
+* Fail if "SetCall-StartCAll-Btn" is NOT exist fail message "SetCall-StartCAll-Btn  Cant found On setcall Page"
+ Fail if "SetCall-Language-DropDown" is NOT exist fail message "SetCall-Language-DropDown Cant found On setcall Page"
+* Fail if "SetCall-Notes-Textbox" is NOT exist fail message "SetCall-Notes-Textbox  Cant found On setcall Page"
+* Fail if "SetCall-CopyLink-CheckBox" is NOT exist fail message "SetCall-CopyLink-CheckBox  Cant found On setcall Page"
+* Fail if "SetCall-SendSms-CheckBox" is NOT exist fail message "SetCall-SendSms-CheckBox  Cant found On setcall Page"
+* Fail if "SetCall-SendEmail-CheckBox" is NOT exist fail message "SetCall-SendEmail-CheckBox  Cant found On setcall Page"
+* Fail if "SetCall-CopyLink-ControlChecked" is NOT exist fail message "Copy link is not checked!!!  Cant found On setcall Page"
+
+# set call open setcall with engineers
+* Click to "SetCall-SetCallWithEngineers-CheckBox"
+
+# set call open SetCall With Client
+* Click to "SetCall-SetCallWithClient-CheckBox"
+
+
+# set Call with Engineers Page Control
+* Fail if "SetCall-Engineer-TextBox" is NOT exist fail message "SetCall-Engineer-TextBox Cant found On setcall Page"
+ Fail if "SetCall-Language-DropDown" is NOT exist fail message "SetCall-Language-DropDown Cant found On setcall Page"
+* Fail if "SetCall-Notes-Textbox" is NOT exist fail message "SetCall-Notes-Textbox  Cant found On setcall Page"
+* Fail if "SetCall-CopyLink-CheckBox" is NOT exist fail message "SetCall-CopyLink-CheckBox  Cant found On setcall Page"
+* Fail if "SetCall-SendSms-CheckBox" is NOT exist fail message "SetCall-SendSms-CheckBox  Cant found On setcall Page"
+* Fail if "SetCall-SendEmail-CheckBox" is NOT exist fail message "SetCall-SendEmail-CheckBox  Cant found On setcall Page"
+* Fail if "SetCall-CopyLink-ControlChecked" is NOT exist fail message "Copy link is not checked!!!  Cant found On setcall Page"
+
+# set Call with Client Page Control
+* Fail if "SetCall-Client-Textbox" is NOT exist fail message "SetCall-Client-Textbox Cant found On client Page"
+ Fail if "SetCall-Language-DropDown" is NOT exist fail message "SetCall-Language-DropDown Cant found On client Page"
+* Fail if "SetCall-Notes-Textbox" is NOT exist fail message "SetCall-Notes-Textbox  Cant found On client Page"
+* Fail if "SetCall-CopyLink-CheckBox" is NOT exist fail message "SetCall-CopyLink-CheckBox  Cant found On client Page"
+* Fail if "SetCall-SendSms-CheckBox" is NOT exist fail message "SetCall-SendSms-CheckBox  Cant found On client Page"
+* Fail if "SetCall-SendEmail-CheckBox" is NOT exist fail message "SetCall-SendEmail-CheckBox  Cant found On client Page"
+* Fail if "SetCall-CopyLink-ControlChecked" is NOT exist fail message "Copy link is not checked!!!  Cant found On client Page"
+* Fail if "SetCall-Client ID-TextBox" is NOT exist fail message "SetCall-Client ID-TextBox Cant found On client Page"
+
+
+# Set Call Check Set Call Direcly mondatory field
+* Click to "SetCall-StartCAll-Btn"
+* Wait "1" seconds
+* Fail if "SetCall-ContactName-Err" is NOT exist fail message "Cant find 'Please enter contact name' warning"
+
+# Set Call Check Set Call with Engineer mondatory field
+* Click to "SetCall-StartCAll-Btn"
+* Wait "1" seconds
+* Fail if "SetCall-Engineer-Err" is NOT exist fail message "Cant find 'Please enter Engineer name' warning"
+
+# Set Call Check Set Call with Client mondatory field
+* Click to "SetCall-StartCAll-Btn"
+* Wait "1" seconds
+* Fail if "SetCall-ClientId-Err" is NOT exist fail message "Cant find 'Please enter ClientId' warning"
+
+# SetCall Call Directly Check Mail Proper format
+* Write "Contact Name" to "SetCall-ContactName-TextBox"
+Fill Message Content with uniq content
+* Click to "SetCall-SendEmail-CheckBox"
+* Set Call Try Wrong Email Addresses
+
+# SetCall Call Engineer Check Mail Proper format
+* Choose "test" from "SetCall-Engineer-TextBox" dropdown
+Fill Message Content with uniq content
+* Click to "SetCall-SendEmail-CheckBox"
+* Set Call Try Wrong Email Addresses
+
+# SetCall Call Client Check Mail Proper format
+* Write "test" to "SetCall-Client-Textbox"
+* Wait "2" seconds
+* Choose "test" from "SetCall-Client-Textbox" dropdown
+Fill Message Content with uniq content
+* Click to "SetCall-SendEmail-CheckBox"
+* Set Call Try Wrong Email Addresses
+
+#SetCall Client Check Sms Proper format
+* Write "b" to "SetCall-Client-Textbox"
+* Wait "2" seconds
+* Choose "a" from "SetCall-Client-Textbox" dropdown
+* Click to "SetCall-SendSms-CheckBox"
+* Set Call Try Wrong Phone number
+
+# SetCall Engineer Check Sms Proper format
+* Choose "test" from "SetCall-Engineer-TextBox" dropdown
+* Click to "SetCall-SendSms-CheckBox"
+* Set Call Try Wrong Phone number
+
+# SetCall Drictly Check Sms Proper format
+* Write "Contact Name" to "SetCall-ContactName-TextBox"
+* Click to "SetCall-SendSms-CheckBox"
+* Set Call Try Wrong Phone number
+
+# Start Client Call With Sms
+* Write "b" to "SetCall-Client-Textbox"
+* Wait "2" seconds
+* Choose "a" from "SetCall-Client-Textbox" dropdown
+* Click to "SetCall-SendSms-CheckBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Click to "SetCall-StartCAll-Btn"
+* Wait "5" seconds
+* Open The Current Tab
+* Fail if "Call-Link-Text" is NOT exist fail message "Call Did now start !!!"
+
+# Start Directly Call With Sms
+* Write "Contact Name" to "SetCall-ContactName-TextBox"
+* Click to "SetCall-SendSms-CheckBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Click with js "SetCall-StartCAll-Btn"
+* Wait "5" seconds
+* Open The Current Tab
+* Fail if "Call-Link-Text" is NOT exist fail message "Call Did now start !!!"
+
+
+
+# Start Engineer Call With Sms
+* Choose "test" from "SetCall-Engineer-TextBox" dropdown
+* Click to "SetCall-SendSms-CheckBox"
+*Wait "2" seconds
+* Cleat Text "SetCall-Contact Phone-TextBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Click to "SetCall-StartCAll-Btn"
+* Wait "5" seconds
+* Open The Current Tab
+* Fail if "Call-Link-Text" is NOT exist fail message "Call Did now start !!!"

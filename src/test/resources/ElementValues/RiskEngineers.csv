@@ -1,0 +1,21 @@
+dkgndk,xpath,"//*[@type=""button""]//*[contains(@class,'search')]"
+RiskEng-YeniEkle-Btn,xpath,"//*[@class=""fa fa-add""]/.."
+RiskEng-FirstName-TxtBox,xpath,//*[.='First Name']/..//input[@type='text']
+RiskEng-LastName-TxtBox,xpath,//*[.='Last Name']/.//input[@type='text']
+RiskEng-Phone-TxtBox,xpath,"//input[@type=""tel""]"
+RiskEng-Email-TxtBox,xpath,//*[.='Email']/..//input[@type='text']
+RiskEng-Password-TxtBox,xpath,//*[.='Password']/.//input[@type='password']
+RiskEng-ConfPassword-TxtBox,xpath,//*[.='Confirm Password']/.//input[@type='password']
+RiskEng-Save-Btn,xpath,"//*[@class=""fa fa-save""]/../..//*[contains(text(),'Save')]"
+RiskEng-FirstName-TxtBox-Err,xpath,"//*[.='First Name']/..//div[@class=""el-form-item__error""]"
+RiskEng-LastName-TxtBox-Err,xpath,"//*[.='Last Name']/..//div[@class=""el-form-item__error""]"
+RiskEng-Phone-TxtBox-Err,xpath,"//input[@type=""tel""]/../../div[@class=""el-form-item__error""]"
+RiskEng-Email-TxtBox-Err,xpath,"//*[.='Email']/..//div[@class=""el-form-item__error""]"
+RiskEng-Password-TxtBox-Err,xpath,"//*[.='Password']/..//div[@class=""el-form-item__error""]"
+RiskEng-ConfPassword-TxtBox-Err,xpath,"//*[.='Confirm Password']/..//div[@class=""el-form-item__error""]"
+RiskEng-Refresh-Btn,xpath,"//*[@class=""fa fa-refresh""]"
+RiskEng-FirstPass-Input,xpath,(//input[@type='password'])[1]
+RiskEng-SecondPass-Input,xpath,(//input[@type='password'])[2]
+RiskEng-State-DD,xpath,"//*[@placeholder=""State""]"
+RiskEng-InActife-Checkbox,xpath,"//*[@class=""el-checkbox__label"" ]/..//*[contains(text(),' Engineers')]"
+RiskEng-SearchBar-TextBox,xpath,"//*[@placeholder=""Type to filter""]"

@@ -1,0 +1,187 @@
+Created by znkldk on 20.01.2022
+
+This is a concept file with following syntax for each concept.
+# Call Page host Elements Control
+* Fail if "Call-Recorder-Btn" is NOT exist fail message "Call-Recorder-Btn Cant find on call page"
+* Fail if "Call-Location-Btn" is NOT exist fail message "Call-Location-Btn Cant find on call page"
+* Fail if "Call-cameraswitch-Btn" is NOT exist fail message "Call-cameraswitch-Btn Cant find on call page"
+* Fail if "Call-cameraOnOff-Btn" is NOT exist fail message "Call-cameraOnOff-Btn Cant find on call page"
+* Fail if "Call-MicOnOff-Btn" is NOT exist fail message "Call-MicOnOff-Btn Cant find on call page"
+* Fail if "Call-EndCall-Btn" is NOT exist fail message "Call-EndCall-Btn Cant find on call page"
+* Fail if "Call-Message-Btn" is NOT exist fail message "Call-Message-Btn Cant find on call page"
+* Fail if "Call-AddParticipant-Btn" is NOT exist fail message "Call-AddParticipant-Btn Cant find on call page"
+* Fail if "Call-Link-Text" is NOT exist fail message "Call-Link-Text Cant find on call page"
+* Fail if "Call-RightArrow-Btn" is NOT exist fail message "Call-RightArrow-Btn Cant find on call page"
+* Fail if "Call-First Video-Cam" is NOT exist fail message "Call-First Video-Cam Cant find on call page"
+* Fail if "Call-meatingTime-time" is NOT exist fail message "Call-meatingTime-time Cant find on call page"
+* Fail if "Call-chanel-Text" is NOT exist fail message "Call-chanel-Text Cant find on call page"
+* Fail if "Call-ConnetctionTest-Btn" is NOT exist fail message "Call-ConnetctionTest-Btn Cant find on call page"
+
+# Call Page guest Elements Control
+* Fail if "Call-Recorder-Btn" is exist fail message "Call-Recorder-Btn find on guest call page"
+* Fail if "Call-Location-Btn" is exist fail message "Call-Location-Btn find on guest call page"
+* Fail if "Call-cameraswitch-Btn" is NOT exist fail message "Call-cameraswitch-Btn Cant find on guest call page"
+* Fail if "Call-cameraOnOff-Btn" is NOT exist fail message "Call-cameraOnOff-Btn Cant find on guest call page"
+* Fail if "Call-MicOnOff-Btn" is NOT exist fail message "Call-MicOnOff-Btn Cant find on guest call page"
+* Fail if "Call-EndCall-Btn" is NOT exist fail message "Call-EndCall-Btn Cant find on guest call page"
+* Fail if "Call-Message-Btn" is NOT exist fail message "Call-Message-Btn Cant find on guest call page"
+* Fail if "Call-AddParticipant-Btn" is exist fail message "Call-AddParticipant-Btn find guest on guest call page"
+* Fail if "Call-Link-Text" is exist fail message "Call-Link-Text find on guest guest call page"
+* Fail if "Call-RightArrow-Btn" is NOT exist fail message "Call-RightArrow-Btn Cant find on guest call page"
+* Fail if "Call-First Video-Cam" is NOT exist fail message "Call-First Video-Cam Cant find on guest call page"
+* Fail if "Call-meatingTime-time" is exist fail message "Call-meatingTime-time find on guest guest call page"
+* Fail if "Call-chanel-Text" is NOT exist fail message "Call-chanel-Text Cant find on guest call page"
+* Fail if "Call-ConnetctionTest-Btn" is exist fail message "Call-ConnetctionTest-Btn find on guest call page"
+
+# Add Guest Check Pop Up Form
+* Fail if "SetCall-ContactName-TextBox" is NOT exist fail message "SetCall-ContactName-TextBox  Cant found On setcall Page"
+* Fail if "SetCall-CompanyName-TextBox" is NOT exist fail message "SetCall-CompanyName-TextBox  Cant found On setcall Page"
+* Fail if "SetCall-Notes-Textbox" is NOT exist fail message "SetCall-Notes-Textbox  Cant found On setcall Page"
+* Fail if "CallSVCL-CopyLink-CheckBox" is NOT exist fail message "SetCall-CopyLink-CheckBox  Cant found On setcall Page"
+* Fail if "CallSVCL-SendSms-CheckBox" is NOT exist fail message "SetCall-SendSms-CheckBox  Cant found On setcall Page"
+* Fail if "CallSVCL-SendEmail-CheckBox" is NOT exist fail message "SetCall-SendEmail-CheckBox  Cant found On setcall Page"
+* Fail if "CallSVCL-CopyLink-ControlChecked" is NOT exist fail message "Copy link is not checked!!!  Cant found On setcall Page"
+* Fail if "CallSVCL-AddToCall-Btn" is NOT exist fail message "SetCall-SendSms-CheckBox  Cant found On setcall Page"
+* Fail if "CallSVCL-AddToCall-Btn" is NOT exist fail message "CallSVCL-Close-Btn  Cant found On setcall Page"
+
+# Open Add Guest Form
+* Click to "Call-AddParticipant-Btn"
+* Fail if "CallSVCL-Title-Text" is NOT exist fail message "Add Guest Form Did Not Open"
+
+# Close Add Guest Form
+* Click to "CallSVCL-Close-Btn"
+* Fail if "CallSVCL-Title-Text" is exist fail message "Add Guest Form Did Not Close"
+
+# Call Add Partipand With Copylink
+* Write "Contact Name" to "SetCall-ContactName-TextBox"
+* Click to "CallSVCL-AddToCall-Btn"
+* Wait "2" seconds
+
+# Call Add Partipand With Sms
+* Write "Contact Name" to "SetCall-ContactName-TextBox"
+* Click to "CallSVCL-SendSms-CheckBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Click to "CallSVCL-AddToCall-Btn"
+* Wait "2" seconds
+
+# Call Add Partipand With Email
+* Write "Contact Name" to "SetCall-ContactName-TextBox"
+* Click to "CallSVCL-SendEmail-CheckBox"
+* Write "cdknn.test@inbox.testmail.app" to "SetCall-Contact Email-TextBox"
+* Click to "CallSVCL-AddToCall-Btn"
+* Wait "2" seconds
+
+# Call Open Message Area
+* Click to "Call-Message-Btn"
+* Wait "1" seconds
+* Fail if "Call-Send-Btn" is NOT exist fail message "Message Area did not open"
+
+# Call Send a message <text>
+* Write <text> to "Call-Message-TextBox"
+* Click with js "Call-Send-Btn"
+
+# Call open the host tab
+* Open The Current Tab
+* Wait "2" seconds
+
+# Call Close Message Area
+* Click with js "Call-MessageClose-Btn"
+* Wait "2" seconds
+* Fail if "Call-Send-Btn" is exist fail message "Message Area did not close"
+
+# Call Message Area Elements Control
+* Fail if "Call-MessageClose-Btn" is NOT exist fail message "Call-MessageClose-Btn cant find message area"
+* Fail if "Call-Message-TextBox" is NOT exist fail message "Call-Message-TextBox cant find message area"
+* Fail if "Call-Send-Btn" is NOT exist fail message "Call-Send-Btn cant find message area"
+
+# Call open connection test
+* Click to "Call-ConnetctionTest-Btn"
+* Fail if "Call-ConnectionTestStart-Btn" is NOT exist fail message "connection test page did not open!!"
+
+# Call press End Call btn end Check Pop up
+* Click to "Call-First Video-Cam"
+* Wait "5" seconds
+* Hover element "Call-EndCall-Btn"
+* Wait "2" seconds
+* Click to "Call-EndCall-Btn"
+* Fail if "Call-PopupCancel-Btn" is NOT exist fail message "Call-PopupCancel-Btn cant find on end call pop up"
+* Fail if "Call-PopupOK-Btn" is NOT exist fail message "Call-PopupOK-Btn cant find on end call pop up"
+
+# Call Cancel pop up and check it
+* Click to "Call-PopupCancel-Btn"
+* Wait "2" seconds
+* Fail if "Call-popupClosed-Control" is NOT exist fail message "pop up did not close"
+
+# Call Ok pop up and check it
+* Click to "Call-PopupOK-Btn"
+* Wait "2" seconds
+
+# Call set voice mute
+* Call make appear video call buttons
+* Hover element "Call-MicOnOff-Btn"
+* Wait "1" seconds
+*Click with js "Call-MicOnOff-Btn"
+* Wait "1" seconds
+* Call Check Voice streaming is off
+
+# Call set video mute
+* Call make appear video call buttons
+* Hover element "Call-cameraOnOff-Btn"
+* Wait "1" seconds
+*Click with js "Call-cameraOnOff-Btn"
+* Wait "1" seconds
+* Call Check Video streaming is off
+
+# Call make appear video call buttons
+* Wait "10" seconds
+* Hover element "Call-First Video-Cam"
+* Wait "1" seconds
+* Hover element "Call-BigVideo-Place"
+* Click to "Call-BigVideo-Place"
+
+# Call press record btn with out guest
+* Hover element "Call-Recorder-Btn"
+* Click to "Call-Recorder-Btn"
+* Does Error Pup up contains "Record can start when client connected."
+
+# Call press SS btn with out guest
+* Hover element "Call-ScreenShot-Btn"
+* Click to "Call-ScreenShot-Btn"
+* Does Success Message Appear if yes error message "cant take ss with out guest please Check it!"
+
+# CAll Open video call drive
+* Fail if "CAll-VideosCallDriveClose-Control" is NOT exist fail message "Video call driver window is open without hovering it!!!"
+* Call Page Open the rigtside bar
+
+# Chrome popup enter and Close the tab
+* Chrome pop up accept
+* Wait "1" seconds
+* Check only one tab exist
+
+# Take an ScreenShot
+* Call make appear video call buttons
+* Hover element "Call-ScreenShot-Btn"
+* Wait "1" seconds
+* Click to "Call-ScreenShot-Btn"
+* Wait "10" seconds
+
+# Take an ScreenShot Comford
+* Hover element "Call-ScreenShot-Btn"
+* Wait "1" seconds
+* Click to "Call-ScreenShot-Btn"
+* Wait "10" seconds
+
+# Take location
+* Wait "10" seconds
+* Call make appear video call buttons
+* Hover element "Call-Location-Btn"
+* Wait "1" seconds
+* Click to "Call-Location-Btn"
+* Does Success Message Appear if not Fail message "unable to take location"
+
+# Take location comford
+* Wait "2" seconds
+* Hover element "Call-Location-Btn"
+* Wait "1" seconds
+* Click to "Call-Location-Btn"
+* Does Success Message Appear if not Fail message "unable to take location"

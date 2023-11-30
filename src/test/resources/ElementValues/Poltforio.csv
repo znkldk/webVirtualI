@@ -1,0 +1,13 @@
+baseprotfoliosa,xpath,"//*[@type=""button""]//*[contains(@class,'search')]"
+Portfolio-Query-Btn,xpath,//span[.='Query']
+Portfolio-Hide Filter-Btn,xpath,//span[.='Hide Filter']
+Portfolio-Filter-Btn,xpath,"//*[@readonly=""readonly""]"
+Portfolio-Celendar-Btn,xpath,"//*[@class=""el-input__icon el-range__icon el-icon-date""]"
+Portfolio-buyutgec-Btn,xpath,"//*[@class=""el-input-number__decrease""]"
+,,
+,,
+,,
+,,
+,,
+,,
+,,

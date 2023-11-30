@@ -1,0 +1,53 @@
+Created by znkldk on 10.12.2021
+
+This is a concept file with following syntax for each concept.
+# Go to SetCall
+* Click to "Menu-SetCall-Btn"
+* Fail if "Menu-SetCall-Title" is NOT exist fail message "SetCall page did not open"
+
+# Go to Micro Clients
+* Click to "Menu-Micro Management-Btn"
+* Wait "2" seconds
+* Click to "Menu-Micro Clients-Btn"
+* Wait "2" seconds
+* Fail if "Menu-Micro Clients-Title" is NOT exist fail message "Micro Clients page did not open"
+
+# Go to Micro List
+* Click to "Menu-Micro List-Btn"
+* Wait "2" seconds
+* Fail if "Menu-Micro List-Title" is NOT exist fail message "Micro List page did not open"
+
+# Go to Forms Administration
+* Click to "Menu-Forms Administration-Btn"
+* Fail if "Menu-Forms Administration-Title" is NOT exist fail message "Forms Administration page did not open"
+
+# Go to Portfolio Management Info
+* Click to "Menu-Portfolio Management Info-Btn"
+* Fail if "Menu-Portfolio Management Info-Title" is NOT exist fail message "Portfolio Management Info page did not open"
+
+# Go to Translation
+* Click to "Menu-Translation-Btn"
+* Fail if "Menu-Translation-Title" is NOT exist fail message "Translation page did not open"
+
+# Go to Portfolio Analytics
+* Click to "Menu-Portfolio Analytics-Btn"
+* Wait "2" seconds
+
+# Go to Claim Management
+* Click to "Menu-ClaimManagment-Btn"
+* Click to "Manu-ClaimDashBoard-Btn"
+* Wait "2" seconds
+* Fail if "Menu-Dashboard-Title" is NOT exist fail message "Dashboard page did not open"
+
+# Close menu field
+* Fail if "Menu-menubarOpen-Cntrl" is NOT exist fail message "Menu is already closed"
+* Click to "Menu-Sandvich-Btn"
+* Wait "2" seconds
+* Fail if "Menu-menubarOpen-Cntrl" is exist fail message "Menu Not closed"
+
+# Open menu field
+* Fail if "Menu-menubarOpen-Cntrl" is exist fail message "Menu is already opened"
+* Click to "Menu-Sandvich-Btn"
+* Wait "2" seconds
+* Fail if "Menu-menubarOpen-Cntrl" is NOT exist fail message "Menu Not opened"
+

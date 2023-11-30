@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="2" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.0.2" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">2021-12-22T09:39:00Z</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">word</m>
+<m key="dc.date">2021-12-22T09:39:00Z</m>
+<m key="dc.format">application/x-abiword</m>
+<m key="dc.title">Adsız doküman</m>
+<m key="meta:editing-cycles">2</m>
+<m key="meta:editing-duration">PT0S</m>
+<m key="meta:initial-creator">word</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="1" edit-time="0" last-saved="1640165997" uid="1fc20864-630b-11ec-8b99-970dc3864e0a">
+<version id="1" started="1640165997" uid="1fc2e5e0-630b-11ec-8b99-970dc3864e0a" auto="0" top-xid="2"/>
+</history>
+<styles>
+<s type="P" name="Normal" props="font-weight:normal; orphans:2; text-transform:none; bot-space:0in; shading-pattern:1; shading-foreground-color:transparent; left-space:0in; text-align:left; right-space:0in; lang:en-US; dom-dir:ltr; margin-bottom:0.1111in; default-tab-interval:0.5in; top-space:0in; bgcolor:transparent; text-position:normal; line-height:1.070000; font-size:11pt; font-style:normal; widows:2; font-family:Calibri"/>
+</styles>
+<pagesize pagetype="Custom" orientation="portrait" width="210.253580" height="297.037760" units="mm" page-scale="1.000000"/>
+<section xid="1" props="page-margin-right:1in; page-width:8.2777in; page-margin-left:1in; page-orientation:portrait; page-margin-bottom:1in; page-margin-top:1in; page-height:11.6944in">
+<p style="Normal" props="" xid="2">sample doc</p>
+</section>
+</abiword>

@@ -1,0 +1,96 @@
+Created by znkldk on 8.12.2021
+
+This is a concept file with following syntax for each concept.
+# Login UserName <usrName> Password <password>
+* Wait "10" seconds
+* Accept Cookie
+* Write <usrName> to "Login_emailField_Tb"
+* Write <password> to "Login_passwordField_Tb"
+* Wait "2" seconds
+* Click to "Login_signinButton_Btn"
+* Wait "10" seconds
+* Fail if "Mainpage_Menu_Items" is NOT exist fail message "Unsuccesful login!!!"
+
+# Accept Cookie
+* Click with js id "CybotCookiebotDialogBodyButtonAccept"
+* Wait "3" seconds
+
+# Login UserName <usrName> Password <password> not first step
+* Write <usrName> to "Login_emailField_Tb"
+* Write <password> to "Login_passwordField_Tb"
+* Click to "Login_signinButton_Btn"
+* Wait "10" seconds
+* Fail if "Mainpage_Menu_Items" is NOT exist fail message "Unsuccesful login!!!"
+
+# Login UserName current Password <password> not first step
+* Write email to "Login_emailField_Tb"
+* Write <password> to "Login_passwordField_Tb"
+* Click to "Login_signinButton_Btn"
+* Wait "6" seconds
+* Fail if "Login_signinButton_Btn" is exist fail message "Unsuccesful login!!!"
+
+# Login UserName current Password <password>
+* Accept Cookie
+* Write email to "Login_emailField_Tb"
+* Write <password> to "Login_passwordField_Tb"
+* Click to "Login_signinButton_Btn"
+* Wait "6" seconds
+* Fail if "Login_signinButton_Btn" is exist fail message "Unsuccesful login!!!"
+
+# Login UserName <usrName> and Wrong Password
+* Wait "5" seconds
+* Accept Cookie
+* Write <usrName> to "Login_emailField_Tb"
+* Write "WrongPassword" to "Login_passwordField_Tb"
+* Click to "Login_signinButton_Btn"
+* Wait "4" seconds
+* Fail if "Mainpage_Menu_Items" is exist fail message "ABLE TO ENTER WITH WRONG RASSWORD !!!!!"
+
+# Logout
+* Click to "Main_Logout_Btn"
+* Click to "MAin_LogoutYes_Btn"
+* Wait "10" seconds
+* Fail if "Login_emailField_Tb" is NOT exist fail message "Unsuccesful Logout!!!"
+* Go to Login without Robot Check
+
+# Logout cancel
+* Click to "Main_Logout_Btn"
+* Wait "1" seconds
+* Click to "MAin_LogoutCancel_Btn"
+* Wait "5" seconds
+* Fail if "Main_Logout_Btn" is NOT exist fail message "something wrong"
+
+# Login last created risk engineer
+* Wait "7" seconds
+* Accept Cookie
+* Write email to "Login_emailField_Tb"
+* Write "123123" to "Login_passwordField_Tb"
+* Wait "1" seconds
+* Click to "Login_signinButton_Btn"
+* Wait "10" seconds
+* Fail if "Menu-SetCall-Btn" is NOT exist fail message "Unsuccesful login!!!"
+* Wait "5" seconds
+
+# Login last created risk engineer not first Step
+* Write email to "Login_emailField_Tb"
+* Write "123123" to "Login_passwordField_Tb"
+* Click to "Login_signinButton_Btn"
+* Wait "5" seconds
+
+# Login last created risk engineer change password
+* Write email to "Login_emailField_Tb"
+* Write "123123" to "Login_passwordField_Tb"
+* Click to "Login_signinButton_Btn"
+* Wait "4" seconds
+* Fail if "Mainpage_Menu_Items" is exist fail message "Changed password was unsuccessful!"
+
+# Login with Admin Account
+* Wait "10" seconds
+* Accept Cookie
+* Write "testadmin@test.com" to "Login_emailField_Tb"
+* Write "Bouncer!1" to "Login_passwordField_Tb"
+
+* Wait "2" seconds
+* Click to "Login_signinButton_Btn"
+* Wait "10" seconds
+* Fail if "Mainpage_Menu_Items" is NOT exist fail message "Unsuccesful login!!!"

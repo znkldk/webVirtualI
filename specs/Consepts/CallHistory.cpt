@@ -1,0 +1,191 @@
+Created by znkldk on 13.01.2022
+
+This is a concept file with following syntax for each concept.
+# Call History Click For Detail Btn
+* Fail if "CallHistory-FirstDetail-Btn" is NOT exist fail message "Cant Find Any Detail Btn Plesa Check Call Scenario!!!"
+* Click to "CallHistory-FirstDetail-Btn"
+* Wait "2" seconds
+
+# Call History are Video And Image There
+* Fail if "CallHistory-FirstImage-Img" is NOT exist fail message "Cant find image Please Check Call Scenario!!!"
+* Fail if "CallHistory-ImageTag-Btn" is NOT exist fail message "CallHistory-ImageTag-Btn cant found in Call History Detail!!!"
+* Fail if "CallHistory-ImageDownload-Btn" is NOT exist fail message "CallHistory-ImageDownload-Btn cant found in Call History Detail!!!"
+* Fail if "CallHistory-ImageDelete-Btn" is NOT exist fail message "CallHistory-ImageDelete-Btn cant found in Call History Detail!!!"
+* Fail if "CallHistory-VideoDelete-Btn" is NOT exist fail message "CallHistory-VideoDelete-Btn cant found in Call History Detail!!!"
+* Fail if "CallHistory-VideoDownload-Btn" is NOT exist fail message "CallHistory-VideoDownload-Btn cant found in Call History Detail!!!"
+* Fail if "CallHistory-VideoTag-Btn" is NOT exist fail message "CallHistory-VideoTag-Btn cant found in Call History Detail!!!"
+* Fail if "CallHistory-FirstVideo-Btn" is NOT exist fail message "CallHistory-FirstVideo-Btn cant found in Call History Detail!!!"
+
+# CallHistory Open Image
+* Click to "CallHistory-FirstImage-Img"
+* Wait "2" seconds
+* Fail if "CallHistory-BiImage-Img" is NOT exist fail message "Image Did not open"
+
+# CallHistory Open Video
+* Click to "CallHistory-FirstVideo-Btn"
+* Wait "2" seconds
+* Fail if "Video-player-player" is NOT exist fail message "Video did not open"
+
+# Call History Close Video
+* Click to "Video-close-btn"
+* Wait "2" seconds
+* Fail if "Video-player-player" is exist fail message "video player did not close"
+
+# CallHistory Close Image
+* Click to "ImgViever-BigImageClose-Btn"
+* Wait "2" seconds
+* Fail if "ImgViever-BigImageClose-Btn" is exist fail message "Image did not close"
+
+# CallHistory check all Image Viever Items
+* Fail if "ImgViever-zoomout-Btn" is NOT exist fail message "ImgViever-zoomout-Btn cant found in image viever"
+* Fail if "ImgViever-zoomout-Btn" is NOT exist fail message "ImgViever-zoomout-Btn cant found in image viever"
+* Fail if "ImgViever-zoomout-Btn" is NOT exist fail message "ImgViever-zoomout-Btn cant found in image viever"
+* Fail if "ImgViever-zoomout-Btn" is NOT exist fail message "ImgViever-zoomout-Btn cant found in image viever"
+* Fail if "ImgViever-zoomout-Btn" is NOT exist fail message "ImgViever-zoomout-Btn cant found in image viever"
+* Fail if "ImgViever-BigImageClose-Btn" is NOT exist fail message "ImgViever-BigImageClose-Btn cant found in image viever"
+
+# CallHistory open Share Menu
+* Click to "CallHistory-Share-Btn"
+* Wait "2" seconds
+
+# Callhistory open shared call history
+* Wait "4" seconds
+* Go to Shared link and enter The Password
+* Click to "Share-Go-Btn"
+* Wait "20" seconds
+* Click with js id "CybotCookiebotDialogBodyButtonAccept"
+* Wait "4" seconds
+
+# CallHistory open send menu
+* Click to "CallHistory-Send-Btn"
+* Wait "2" seconds
+* Fail if "CallHistory-sms-CheckBox" is NOT exist fail message "Send menu did not open"
+
+# CallHistory Share with Sms
+* Click to "CallHistory-sms-CheckBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Click to "CallHistory-sendSms-Btn"
+* Does Success Message Appear if not Fail message "could not send sms"
+
+# CallHistory Share with Email
+* Wait "1" seconds
+* Click to "CallHistory-email-checkbox"
+* Wait "1" seconds
+* Write "cdknn.test@inbox.testmail.app" to "CallHistory-Email-TextBox"
+* Click to "CallHistory-SendEmail-Btn"
+* Call History Check Mail Shared Email
+
+#CAllHistory Stop Share
+* Click to "CAllHistory-StopSharing-btn"
+* Wait "1" seconds
+* Click to "CAllhistory-PopUpYes-Btn"
+* Wait "1" seconds
+
+# Callhistory open stopped shared call history
+* Wait "4" seconds
+* Go to Shared link and enter The Password
+* Click to "Share-Go-Btn"
+* Wait "20" seconds
+* Click with js id "CybotCookiebotDialogBodyButtonAccept"
+* Fail if "Share-Go-Btn" is NOT exist fail message "Share Did not Stop"
+
+# Callhistory delete img
+* Click to "CallHistory-ImageDelete-Btn"
+* Click to "CAllhistory-PopUpYes-Btn"
+* Wait "2" seconds
+* Fail if "CallHistory-ImageDelete-Btn" is exist fail message "unsuccesfull delete"
+
+# Callhistory delete video
+* Click to "CallHistory-VideoDelete-Btn"
+* Click to "CAllhistory-PopUpYes-Btn"
+* Wait "2" seconds
+* Fail if "CallHistory-VideoDelete-Btn" is exist fail message "unsuccesfull delete"
+
+# Callhistory add tag video
+* Click to "CallHistory-VideoTag-Btn"
+* Wait "1" seconds
+* Callhistory Add new tag "Video tag"
+* Fail if "CallHistory-Tag-Text" does not contains text "Video tag"
+
+# Callhistory add tag img
+* Click to "CallHistory-ImageTag-Btn"
+* Wait "1" seconds
+* Callhistory Add new tag "img tag"
+* Fail if "CallHistory-Tag-Text" does not contains text "img tag"
+
+# Callhistory Add new tag <text>
+*Click to "CAllhistory-NewTag-Btn"
+* Write <text> to "Callhistory-newTag-TextBox"
+* Click to "CallHistory-Save-Btn"
+
+# Callhistory delete tag video
+* Click to "CallHistory-VideoTag-Btn"
+* Wait "1" seconds
+* Callhistory delete tag
+* Click to "CallHistory-Save-Btn"
+* Fail if "CallHistory-Tag-Text" is exist fail message "unsuccesfull delete tag"
+
+# Callhistory delete tag img
+* Click to "CallHistory-ImageTag-Btn"
+* Wait "1" seconds
+* Callhistory delete tag
+* Click to "CallHistory-Save-Btn"
+* Fail if "CallHistory-Tag-Text" is exist fail message "unsuccesfull delete tag"
+
+# Callhistory delete tag
+* Click to "CAllHistory-Deletetag-btn"
+* Wait "1" seconds
+* Fail if "CAllHistory-Deletetag-btn" is exist fail message "unsuccesfull delete tag"
+
+# Callhistory close details
+* Click to "CAllHistory-Close-Btn"
+* Wait "1" seconds
+* Fail if "CallHistory-FirstDetail-Btn" is NOT exist fail message "un able to close details"
+
+# CAllHistory check page elements
+* Wait "1" seconds
+* Check Grid headers "Caller Name E-mail Phone Notes Sent Clicked"
+* Fail if "CallHistory-Filter-Txtbox" is NOT exist fail message "Call History"
+* Fail if "CallHistory-StartDAte-Clendar" is NOT exist fail message "Call History"
+* Fail if "CallHistory-Enddate-Celendar" is NOT exist fail message "Call History"
+* Fail if "CallHistory-refresh-Btn" is NOT exist fail message "Call History"
+
+# CAll History Filter test
+* Write "000000TestClient" to "CallHistory-Filter-Txtbox"
+* Wait "4" seconds
+* Does All Grid Lines Has The "000000TestClient" if not fail "Call History Filter Test"
+
+# CallHistory Download All Files
+* CallHistory Files Download Image
+* CallHistory Files Download Video
+
+# CallHistory Files Download Image
+* Wait "1" seconds
+* Click to "CallHistory-ImageDownload-Btn"
+* Wait "4" seconds
+
+# CallHistory Files Download Video
+* Wait "1" seconds
+* Click to "CallHistory-VideoDownload-Btn"
+* Wait "4" seconds
+
+# Callhistory Check downloaded files
+* Downloads Check File "contains,mp4" and DeleteIt
+* Downloads Check File "contains,jpg" and DeleteIt
+
+# Call History Check location Icon
+* Fail if "Call History Location-icon" is NOT exist fail message "cant found last call's location info"
+
+# Call History Report Check
+* Click Button With Text "survey report"
+* Wait "2" seconds
+* Char Tab Select "Survey Details"
+* Wait "2" seconds
+* Char Tab Select "Location"
+* Wait "2" seconds
+* Char Tab Select "Files"
+* Check Grid headers "Tags Date Created"
+* Char Tab Select "Calls"
+* Does Grid Has the text "LastRiskEngineer"
+* Char Tab Select "Score"
+* Does overall difrent than zero

@@ -1,0 +1,396 @@
+Created by znkldk on 15.05.2022
+
+This is a concept file with following syntax for each concept.
+# Mondotory fields check
+* Click Button With Text "Submit"
+* Wait "1" seconds
+* Claim Check mondotory fields Alerts
+
+# Open Submit New Claim
+* Click Button With Text "Submit New Claim"
+* Wait "1" seconds
+
+# Claim Fill Mondotory fields
+* Fill TextBox with "123" By Text "Insured Reference Num"
+* Dropdown name "Policy" select "Fire"
+* Celendar select today "Incident Date"
+* Dropdown name "Loss Type" select "TP Fatality"
+* Fill TextBox with "Description" By Text "Incident Description"
+
+# Claim add Note <note>
+* Click with js "Claim-AddNewNote-Btn"
+* Wait "1" seconds
+* Fail if "Claim-Notes-Title" is NOT exist fail message "Notes Did not open"
+* Write <note> to "Claim-Note-TextBox"
+* Click to "Claim-Send-Btn"
+* Wait "1" seconds
+* Notes Check Message Sent <note>
+* Click to "Claim-NoteClose-Btn"
+* Wait "1" seconds
+* Check Grid Has Text <note> in "Notes"
+
+# Claim add Note Cancel
+* Click with js "Claim-AddNewNote-Btn"
+* Wait "1" seconds
+* Fail if "Claim-Notes-Title" is NOT exist fail message "Notes Did not open"
+* Write "Cancel" to "Claim-Note-TextBox"
+* Click to "Claim-NoteCancel-Btn"
+* Wait "2" seconds
+
+# Claim Delete All Files
+* Wait "1" seconds
+* Click Btn with tag on grid "fa fa-trash" "Doc"
+* Click to "Claim-PopUpYes-Btn"
+* Wait "1" seconds
+* Click Btn with tag on grid "fa fa-trash" "image"
+* Click to "Claim-PopUpYes-Btn"
+* Wait "1" seconds
+* Click Btn with tag on grid "fa fa-trash" "Video"
+* Click to "Claim-PopUpYes-Btn"
+* Wait "1" seconds
+* Click Btn with tag on grid "fa fa-trash" "Sound"
+* Click to "Claim-PopUpYes-Btn"
+* Wait "1" seconds
+
+# Claim Files All Check
+* Does Grid Has the text "image"
+* Does Grid Has the text "Doc"
+* Does Grid Has the text "Sound"
+* Does Grid Has the text "Video"
+
+# Claim Check There is no folder
+* Fail if "Claim-Trash-Btn" is exist fail message "edit is unsuccesfull"
+
+# Claim DashBoard Check All Elements
+* Fail if "ClaimDash-REfNo-TextBox" is NOT exist fail message "DashBoard"
+* Fail if "ClaimDash-Celendar-date" is NOT exist fail message "DashBoard"
+* Fail if "ClaimDash-Country-Dd" is NOT exist fail message "DashBoard"
+* Fail if "ClaimDash-Status-Dd" is NOT exist fail message "DashBoard"
+* Fail if "ClaimDash-Policy-dd" is NOT exist fail message "DashBoard"
+* Fail if "ClaimDash-DownloadReport-Btn" is NOT exist fail message "DashBoard"
+* Claim list Check headers
+
+# Claim Detail Page Elements
+* Fail if "Claim-IncidentInformation-Area" is NOT exist fail message "Claim Detail"
+* Fail if "Claim-ClaimantDetails-Area" is NOT exist fail message "Claim Detail"
+* Fail if "Claim-LossInformation" is NOT exist fail message "Claim Detail"
+* Fail if "Claim-Notes" is NOT exist fail message "Claim Detail"
+* Fail if "Claim-Documents" is NOT exist fail message "Claim Detail"
+* Fail if "Claim-Submit-Btn" is NOT exist fail message "Claim Detail"
+
+# Claim details Fill All Areas
+* Fill TextBox with "123" By Text "Insured Reference Num"
+* Dropdown name "Policy" select "Fire"
+* Fill TextBox with "Name" By Text "Insured Representative Name"
+* Fill TextBox with "Name" By Text "Insured Representative Email"
+* Optional Write The Phone Number With Proper Formad "Insured Representative Phone"
+* Dropdown name "Country" select "Turkey"
+* Dropdown name "City" select "Adana"
+* Fill TextBox with "desciription" By Text "Detailed Incident Location"
+* Celendar select today "Incident Date"
+* Dropdown name "Claimant Type" select "TP"
+* Fill TextBox with "Name" By Text "Claimant Name"
+* Fill TextBox with "Name" By Text "Claimant Address"
+* Optional Write The Phone Number With Proper Formad "Claimant Phone"
+* Write "asd@sad.com" to "Claim-email-Textbox"
+* Celendar select today "Incident Reported Date"
+* Dropdown name "Incident Reported By" select "Claimant"
+* Dropdown name "Loss Type" select "Employee Bodily Injury"
+* Dropdown name "Loss Sub Type" select "Minor"
+* Fill TextBox with "1" By Text "Initial Claim Amount"
+* Dropdown name "Currency" select "USD"
+* Fill TextBox with "description" By Text "Loss Description"
+ Fill TextBox with "1" By Text "How many other parties are involved?"
+
+# Claim details Fill All Areas Correct
+* Write text That in Txt to "Claim-InsuredRefNum-TextBox"
+* Dropdown name "Policy" select "Fire"
+* Fill TextBox with "Name" By Text "Insured Representative Name"
+* Fill TextBox with "cdknn.test@inbox.testmail.app" By Text "Insured Representative Email"
+* Optional Write The Phone Number With Proper Formad "Insured Representative Phone"
+* Dropdown name "Country" select "Turkey"
+* Dropdown name "City" select "Adana"
+* Fill TextBox with "desciription" By Text "Detailed Incident Location"
+* Celendar select today "Incident Date"
+* Dropdown name "Claimant Type" select "TP"
+* Fill TextBox with "Claimant Name" By Text "Claimant Name"
+* Fill TextBox with "Claimant Address" By Text "Claimant Address"
+* Optional Write The Phone Number With Proper Formad "Claimant Phone"
+* Write "cdknn.test@inbox.testmail.app" to "Claim-email-Textbox"
+* Celendar select today "Incident Reported Date"
+* Dropdown name "Incident Reported By" select "Claimant"
+* Dropdown name "Loss Type" select "Employee Bodily Injury"
+* Dropdown name "Loss Sub Type" select "Minor"
+* Fill TextBox with "1" By Text "Initial Claim Amount"
+* Dropdown name "Currency" select "USD"
+* Fill TextBox with "Description" By Text "Incident Description"
+* Fill TextBox with "Loss Description" By Text "Loss Description"
+ Fill TextBox with "1" By Text "How many other parties are involved?"
+* Click to "Claim-PotentialRecovery-Swich"
+* Wait "1" seconds
+* Click to "Claim-PotentialRecovery-Swich"
+* Wait "1" seconds
+
+
+# Claim details Fill All Areas Edit Version
+* Fill TextBox with "Edit" By Text "Insured Reference Num"
+* Fill TextBox with "Edit" By Text "Insured Representative Name"
+* Dropdown name "Policy" select "Fire"
+* Fill TextBox with "Edit" By Text "Insured Representative Name"
+* Fill TextBox with "Edit" By Text "Detailed Incident Location"
+* Dropdown name "Claimant Type" select "TP"
+* Fill TextBox with "Edit" By Text "Claimant Name"
+* Fill TextBox with "Edited" By Text "Claimant Address"
+* Dropdown name "Incident Reported By" select "Claimant"
+* Fill TextBox with "1" By Text "Initial Claim Amount"
+* Dropdown name "Currency" select "USD"
+* Fill TextBox with "Description" By Text "Incident Description"
+* Fill TextBox with "Loss Description" By Text "Loss Description"
+ Fill TextBox with "1" By Text "How many other parties are involved?"
+
+# Claim save
+* Click to "Claim-Submit-Btn"
+* Does Success Message Appear if not Fail message "errorMessage"
+* Wait "10" seconds
+
+# Claim DashBoard Grid Saved Claim Values <value1> <value2> <value3>
+* Wait "2" seconds
+* Does Grid Has the text <value1>
+* Does Grid Has the text <value2>
+* Does Grid Has the text <value3>
+
+# Claim Update
+* Click to "Claim-Update-Btn"
+* Does Success Message Appear if not Fail message "errorMessage"
+* Wait "2" seconds
+
+# Claim Display Checks Claim Submission
+* Claim Display Check "Insured Claim Ref No" "rank"
+* Claim Display Check "Policy Period" "-"
+* Claim Display Check "Insured Representative Email" "cdknn.test@inbox.testmail.app"
+* Claim Display Check "Country" "TR"
+* Claim Display Check "Reported By" "Claimant"
+* Claim Display Check "Claimant Address" "Claimant Address"
+* Claim Display Check "Representative Name" "ame"
+* Claim Display Check "Representative Email" "-"
+* Claim Display Check "Loss Sub Type" "Minor"
+* Claim Display Check "Currency" "USD"
+ Claim Display Check "How many other parties are involved?" "1"
+* Claim Display Check "Status" "New"
+* Claim Display Check "Policy Type" "Fire"
+* Claim Display Check "Insured Representative Phone" "+90 555 555 55 55"
+* Claim Display Check "Detailed Location of Incident" "desciription"
+* Claim Display Check "Claimant Type" "TP"
+* Claim Display Check "Claimant Phone" "+90 555 555 55 55"
+* Claim Display Check "Representative Address" "-"
+* Claim Display Check "Legal Involvement" "-"
+* Claim Display Check "Loss Type Details" "-"
+* Claim Display Check "Incident Description" "Description"
+* Claim Display Check "Policy Number" "123"
+* Claim Display Check "Insured Representative Name" "Name"
+* Claim Display Check "City" "Adana"
+* Claim Display Check "Incident Date" "Incident Date"
+* Claim Display Check "Claimant Name" "Claimant Name"
+* Claim Display Check "Claimant Email" "cdknn.test@inbox.testmail.app"
+* Claim Display Check "Representative Phone" "-"
+* Claim Display Check "Loss Type" "Employee Bodily Injury"
+* Claim Display Check "Initial Claim Amount" "1"
+* Claim Display Check "Loss Description" "Loss Description"
+
+
+# Claim Display Checks Claim Acknowledgement
+
+* Claim Display Check "IC Claim Ref No" "-"
+* Claim Display Check "Loss Adjuster Firm Name" "-"
+* Claim Display Check "Loss Adjuster Email" "-"
+* Claim Display Check "Adjuster Fee" "-"
+* Claim Display Check "Claim Handler Name" "-"
+* Claim Display Check "TPA Ref No" "-"
+* Claim Display Check "General Damage" "-"
+* Claim Display Check "Legal Fee" "-"
+* Claim Display Check "Claim Handler Phone" "-"
+* Claim Display Check "Loss Adjuster Name" "-"
+* Claim Display Check "Special Damage" "-"
+* Claim Display Check "Currency" "-"
+* Claim Display Check "Claim Handler Email" "-"
+* Claim Display Check "Loss Adjuster Phone" "-"
+* Claim Display Check "TP Cost" "-"
+
+# Claim Open Acknowledgement Edit Page
+* Wait "1" seconds
+* Click to "Claim-Edit-Btn"
+* Wait "1" seconds
+
+# Claim Acknowledgement Mandotory fields blank
+* Send Acknowledgement
+* Does Error Message Appear id not Fail message= "Mandotory fields"
+
+# Send Acknowledgement
+* Click Button With Text "Send A"
+* Wait "1" seconds
+
+# Claim Acknowledgement Detail Fill All Areas
+* Fill TextBox with "123" By Text "IC Claim Ref No"
+* Fill TextBox with "1" By Text "General Damage"
+* Fill TextBox with "1" By Text "Special Damage"
+* Fill TextBox with "1" By Text "TP Cost"
+* Fill TextBox with "1" By Text "Adjuster Fee"
+* Fill TextBox with "1" By Text "Legal Fee"
+* Dropdown name "Currency" select "USD"
+* Fill TextBox with "text" By Text "Name"
+* Optional Write The Phone Number With Proper Formad "Claim Handler Details"
+* Fill TextBox with "mail@mqil.com" By Text "Email"
+* Write "asd@sad.com" to "Claim-email-Textbox"
+* Fill TextBox with "Name" By Text "Firm Name"
+* Fill TextBox with "123" By Text "TPA Ref No"
+* Fill TextBox with "name" By Text "Name"
+* Optional Write The Phone Number With Proper Formad "TPA Details"
+* Write "asdasd@aa.com" to "Claim-TPAMail-TextBox"
+
+# Claim Acknowledgement Detail Fill Mandotory Fields
+* Fill TextBox with "123" By Text "IC Claim Ref No"
+* Fill TextBox with "1" By Text "General Damage"
+* Fill TextBox with "1" By Text "Special Damage"
+* Fill TextBox with "1" By Text "TP Cost"
+* Fill TextBox with "1" By Text "Adjuster Fee"
+* Fill TextBox with "1" By Text "Legal Fee"
+* Dropdown name "Currency" select "USD"
+* Fill TextBox with "text" By Text "Name"
+* Optional Write The Phone Number With Proper Formad "Claim Handler Details"
+* Fill TextBox with "mail@mqil.com" By Text "Email"
+
+# Claim open Notification
+* Click to "Claim-Notification-Bell"
+* Wait "2" seconds
+
+# Claim open readed messages tab
+* If key exist Click to "Claim-NotsBack-Btn"
+* Click to "Claim-readedNots-tab"
+* Wait "1" seconds
+
+# Claim notification alert check
+* Fail if "Claim-NotificationNumber-text" is NOT exist fail message "there is no notification"
+
+# Claim mark all as readed
+* Wait "1" seconds
+* Click to "Claim-NotificationMarkAssReadet-Btn"
+* Wait "1" seconds
+* Fail if "Claim-NotificationMarkAssReadet-Btn" is exist fail message "button must be diasappear"
+* Fail if "Claim-NotIsEmpty-Check" is exist fail message "mark as readed not worked"
+
+# Claim Open New Insured User Page
+* Wait "2" seconds
+* Click to "Claim-InsuredLogin-Tab"
+* Wait "2" seconds
+* Click Button With Text "New Insured User"
+* Wait "1" seconds
+
+# Claim New Insured User Page Elements Control
+* Fail if "key" is NOT exist fail message "Insured User Page"
+* Fail if "key" is NOT exist fail message "Insured User Page"
+* Fail if "key" is NOT exist fail message "Insured User Page"
+* Fail if "key" is NOT exist fail message "Insured User Page"
+* Fail if "key" is NOT exist fail message "Insured User Page"
+* Fail if "key" is NOT exist fail message "Insured User Page"
+
+# Claim New Insured User PAge Mandotory Filed Test
+* Click to "Claim-NewInsuredSave-Btn"
+* Fail if "Please enter first name" text is NOT exist fail message "Mandotory Filed"
+* Fail if "Please enter last name" text is NOT exist fail message "Mandotory Filed"
+* Fail if "Please enter email address" text is NOT exist fail message "Mandotory Filed"
+* Fail if "Please enter password" text is NOT exist fail message "Mandotory Filed"
+
+# Claim New Insured page password controls
+* Wait "1" seconds
+* Write "text" to "Claim-Firstuser-TextBox"
+* Write "text" to "Claim-LastName-TextBox"
+* Write "text" to "Claim-Email-TxtBox"
+* Write "text" to "Claim-Password-TB"
+* Write "text" to "Claim-PasswordConfirm-TB"
+* Click to "Claim-NewInsuredSave-Btn"
+* Wait "1" seconds
+* Fail if "Please enter a valid password" text is NOT exist fail message "Mandotory Filed"
+* Cleat Text "Claim-PasswordConfirm-TB"
+* Write "text123" to "Claim-PasswordConfirm-TB"
+* Click to "Claim-NewInsuredSave-Btn"
+* Wait "1" seconds
+* Fail if "Passwords do not match" text is NOT exist fail message "Mandotory Filed"
+
+# Claim New Insured page Select All Countries
+* Click to "Claim-AllCountries-CheckBox"
+* Wait "1" seconds
+* Fail if "Claim-Country-DD" is exist fail message "text"
+
+# Claim New Insured page Select Specific Countries
+* Click to "Claim-SpecificCountries-CheckBox"
+* Wait "1" seconds
+* Fail if "Claim-Country-DD" is NOT exist fail message "text"
+
+# Claim New Insured page Select All Countries Except
+* Click to "Claim-AllCountriesExcept-CheckBox"
+* Wait "1" seconds
+* Fail if "Claim-Country-DD" is NOT exist fail message "text"
+
+# Claim Fill New Unsured Page Correct And Create New Insurer All countries
+* Wait "1" seconds
+* Increase risk engineer number
+* Write "Otomasyon" to "Claim-Firstuser-TextBox"
+* Write "Test" to "Claim-LastName-TextBox"
+* Write email to "Claim-Email-TxtBox"
+* Write "Bouncer!1" to "Claim-Password-TB"
+* Write "Bouncer!1" to "Claim-PasswordConfirm-TB"
+* Click to "Claim-NewInsuredSave-Btn"
+* Wait "2" seconds
+* Does Grid Has the text "LastRiskEngineer"
+
+# Claim Fill New Unsured Page Correct And Create New Super Insurer
+* Wait "1" seconds
+* Increase risk engineer number
+* Write "Otomasyon" to "Claim-Firstuser-TextBox"
+* Write "Test" to "Claim-LastName-TextBox"
+* Write email to "Claim-Email-TxtBox"
+* Write "Bouncer!1" to "Claim-Password-TB"
+* Write "Bouncer!1" to "Claim-PasswordConfirm-TB"
+* Choose "super" from "Claim-Role-DD" dropdown
+* Click to "Claim-NewInsuredSave-Btn"
+* Wait "2" seconds
+* Does Grid Has the text "LastRiskEngineer"
+
+# Claim Fill New Insured Page Correct And Create New Insurer Specific Countries
+* Wait "1" seconds
+* Increase risk engineer number
+* Write "Otomasyon" to "Claim-Firstuser-TextBox"
+* Write "Test" to "Claim-LastName-TextBox"
+* Write email to "Claim-Email-TxtBox"
+* Write "Bouncer!1" to "Claim-Password-TB"
+* Write "Bouncer!1" to "Claim-PasswordConfirm-TB"
+* Claim New Insured page Select Specific Countries
+* Wait "2" seconds
+* Choose "Afghanistan" from "Claim-Country-DD" dropdown
+* Click to "Claim-NewInsuredSave-Btn"
+* Wait "2" seconds
+* Does Grid Has the text "LastRiskEngineer"
+
+# Claim Check All Countries In DD
+* Count chooses from "Claim-DashBoardCountry-DD" dropdown must be "242"
+
+# Claim Check Specific Countries In DD
+* Count chooses from "Claim-DashBoardCountry-DD" dropdown must be "1"
+
+# Claim Check All Countries Except DD
+* Count chooses from "Claim-DashBoardCountry-DD" dropdown must be "241"
+
+# Claim Fill New Insured Page Correct And Create New Insurer All Countries Except
+* Wait "1" seconds
+* Increase risk engineer number
+* Write "Otomasyon" to "Claim-Firstuser-TextBox"
+* Write "Test" to "Claim-LastName-TextBox"
+* Write email to "Claim-Email-TxtBox"
+* Write "Bouncer!1" to "Claim-Password-TB"
+* Write "Bouncer!1" to "Claim-PasswordConfirm-TB"
+* Claim New Insured page Select All Countries Except
+* Wait "2" seconds
+* Choose "Afghanistan" from "Claim-Country-DD" dropdown
+* Click to "Claim-NewInsuredSave-Btn"
+* Wait "2" seconds
+* Does Grid Has the text "LastRiskEngineer"

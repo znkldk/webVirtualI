@@ -1,0 +1,164 @@
+Created by znkldk on 26.01.2022
+
+This is a concept file with following syntax for each concept.
+# ID Check For Page Items
+* Fail if "ID-Refresh-Btn" is NOT exist fail message "ID-Refresh-Btn Cant Found In Inspection Detail Page"
+* Fail if "ID-Save-Btn" is NOT exist fail message "ID-Save-Btn Cant Found In Inspection Detail Page"
+* Fail if "ID-Finalize-Btn" is NOT exist fail message "ID-Finalize-Btn Cant Found In Inspection Detail Page"
+* Fail if "ID-Share-Btn" is NOT exist fail message "ID-Share-Btn Cant Found In Inspection Detail Page"
+* Fail if "ID-Title-Text" is NOT exist fail message "ID-Title-Text Cant Found In Inspection Detail Page"
+
+# ID Finalize Without Change Any Think
+* ID Finalize 
+* Wait "2" seconds
+* Does Error Message Appear id not Fail message= "Must not be able to finalize with out change any think please Check it!!"
+
+# ID Save
+* Click to "ID-Save-Btn"
+* Does Success Message Appear if not Fail message "Unsuccesful save"
+
+# ID Finalize 
+* Click to "ID-Finalize-Btn"
+* Click to "ID-PupUpYes-Btn"
+* Wait "3" seconds
+
+# ID Check finalize is proper
+* Wait "2" seconds
+* Fail if "ID-RecalculateRisk-Btn" is NOT exist fail message "ID-RecalculateRisk-Btn did not found"
+* Fail if "ID-Finalize-Btn" is exist fail message "ID-Finalize-Btn did not disappear!!"
+
+# ID Fill Coordinat
+* If key exist Click to "ID-POLICY Agree-btn"
+* Click to "ID-POLICY SY-btn"
+* Click to "ID-SURVEYLOCATİON-btn"
+* Wait "2" seconds
+* Write "40.99210380294041, 29.071736440564514" to "ID-Coordinat-TextBar"
+
+# ID open ınsured name and open file upload window
+* Click to "ID-POLICY SY-btn"
+* Wait "1" seconds
+* Write "text" to "ID-InsuredName-TextBox"
+* Wait "1" seconds
+* Click to "ID-InsuredNameplus-btn"
+* Fail if "ID-InsuredNameWindow-Title" is NOT exist fail message "Image upload window did not open!"
+
+# ID open the list <listName>
+* Call Agenda Choose <listName> from "ID-ListTypes-Dd" dropdown
+* Wait "1" seconds
+* ID check Header <listName>
+* Wait "1" seconds
+
+# ID get json <formType>
+* Wait "3" seconds
+* ID open the list <formType>
+* Inspection Form Check <formType>
+
+# Does coordinat area not empty
+* Fail if "ID-CoordinatPlus-Btn" is NOT exist fail message "copyed form is empty!!! coordinat sould not be empty!! coppy form is unsuccesful!"
+
+# ID get json <formType> For Chart
+* Wait "3" seconds
+* ID open the list <formType>
+
+
+# Inspection open location window
+* Wait "1" seconds
+* Inspection Open Title "POLICY SCHEDULE DETAILS"
+* Wait "1" seconds
+* Inspection Open Title "POLICY SCHEDULE DETAILS>Survey Location"
+* Wait "1" seconds
+* Click to "ID-Location-Icon"
+* Wait "2" seconds
+* Fail if "ID-Location-Icon" is NOT exist fail message "coordinate"
+
+# Inspection Click Coordinat Save Btn
+* Wait "1" seconds
+* Click to "ID-CoordinatSave-Btn"
+* Wait "1" seconds
+* Fail if "ID-CoordinatPlus-Btn" is NOT exist fail message "google coordinads did not work"
+
+# Inspection open coordinate plus btn
+* Wait "2" seconds
+* Click to "ID-CoordinatPlus-Btn"
+* Wait "2" seconds
+
+# Inspection Open Signature
+* Wait "1" seconds
+* Inspection Open Title "Remarks/Comments"
+* Wait "1" seconds
+* Click to "ID-Signature-Icon"
+* Wait "1" seconds
+
+# Inspection Fill Signature
+* Click to "ID-Signature-area"
+* Wait "1" seconds
+* Click to "ID-SignatureSave-Btn"
+* Wait "1" seconds
+* Click to "ID-Signature-Img"
+* Wait "1" seconds
+* Fail if "ID-Signature-area" is NOT exist fail message "something is wrong"
+
+# Inspection Signature Clear
+* Click to "ID-Clear-Btn"
+
+# Inspection Detail Open Plus Window Insured Name
+* Write "text" to "ID-InsuredName-TextBox"
+* Click to "ID-InsuredNameplus-btn"
+
+# Inspection Image Delete
+* Click to "ID-Delete-Btn"
+* Click to "ID-PopUpOk-Button"
+* Wait "1" seconds
+
+# ID open select from visit library
+* Click Button With Text "Select from Visit Library"
+
+# ID add tag img
+* Click to "ID-tag-btn"
+* Wait "1" seconds
+* Callhistory Add new tag "img tag"
+* Fail if "CallHistory-Tag-Text" does not contains text "img tag"
+
+# ID Files Download Image
+* Wait "1" seconds
+* Click to "IDFile-ImgDownload-Btn"
+* Wait "4" seconds
+
+# ID Files Download Doc
+* Wait "1" seconds
+* Click to "IDFile-DocDownload-Btn"
+* Wait "4" seconds
+
+# ID Files Download audio
+* Wait "1" seconds
+* Click to "IDFile-audioDownload-Btn"
+* Wait "4" seconds
+
+# ID Files Download Report
+* Wait "1" seconds
+* Click to "IDChard-downloadReport-btn"
+* Wait "1" seconds
+* Click to "IDChard-download-btn"
+* Wait "4" seconds
+
+# ID Files Download Video
+* Wait "1" seconds
+* Click to "IDFile-VideoDownload-Btn"
+* Wait "4" seconds
+
+# ID uploads All Kind Of File <Name>
+* upload Image name: <Name>
+* upload Video name: <Name>
+* upload Audio name: <Name>
+* upload Doc name: <Name>
+* Inspection Close File Upload Window <Name>
+
+# ID Files Download All kind of files
+* ID Files Download Image
+* ID Files Download Doc
+* ID Files Download audio
+* ID Files Download Video
+* Downloads Check File "1.png" and DeleteIt
+* Downloads Check File "soundSample.mp3" and DeleteIt
+* Downloads Check File "video.mp4" and DeleteIt
+* Downloads Check File "contains,sample" and DeleteIt

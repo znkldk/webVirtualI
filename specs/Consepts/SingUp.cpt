@@ -1,0 +1,137 @@
+Created by znkldk on 7.04.2022
+
+This is a concept file with following syntax for each concept.
+# Sing Up Open Registiration Page
+* Click to "Login-SingUp-Btn"
+* Fail if "SingUp-Email-TextBox" is NOT exist fail message "RegisterPage Did not open"
+
+# Sing Up Check All Items
+* Fail if "SingUp-Email-TextBox" is NOT exist fail message "Register Page"
+* Fail if "SingUp-Password1-TextBox" is NOT exist fail message "Register Page"
+* Fail if "SingUp-Password2-TextBox" is NOT exist fail message "Register Page"
+* Fail if "SingUp-Phone-TextBox" is NOT exist fail message "Register Page"
+* Fail if "SingUp-companyName-TextBox" is NOT exist fail message "Register Page"
+* Fail if "SingUp-Singup-Btn" is NOT exist fail message "Register Page"
+* Fail if "SingUp-Google-Btn" is NOT exist fail message "Register Page"
+* Fail if "SingUp-Apple-Btn" is NOT exist fail message "Register Page"
+* Fail if "SingUp-Singin-Btn" is NOT exist fail message "Register Page"
+* Fail if "SingUp-Privacypolicy-btn" is NOT exist fail message "Register Page"
+* Fail if "SingUp-TermsOfService-btn" is NOT exist fail message "Register Page"
+* Fail if "Login-SingUp-Btn" is NOT exist fail message "Register Page"
+
+# Sing Up Empty Fields Check
+* Click to "Singup-Logo-Btn"
+* Write "a" to "SingUp-Email-TextBox"
+* Cleat Text "SingUp-Email-TextBox"
+* Wait "1" seconds
+* Click to "Singup-Logo-Btn"
+* Write "a" to "SingUp-companyName-TextBox"
+* Cleat Text "SingUp-companyName-TextBox"
+* Wait "1" seconds
+* Click to "Singup-Logo-Btn"
+* Cleat Text "SingUp-Phone-TextBox"
+* Wait "1" seconds
+* Click to "Singup-Logo-Btn"
+* Write "a" to "SingUp-Password2-TextBox"
+* Cleat Text "SingUp-Password2-TextBox"
+* Wait "1" seconds
+* Click to "Singup-Logo-Btn"
+* Write "a" to "SingUp-Password1-TextBox"
+* Cleat Text "SingUp-Password1-TextBox"
+* Wait "1" seconds
+* Sing Up if Text Not Exist Fail "email address" " "
+* Sing Up if Text Not Exist Fail "Please enter a valid password" " "
+
+
+# SingUp Fill All Areas Correct
+* Write "valid@Email.com" to "SingUp-Email-TextBox"
+* Write "CompanyName" to "SingUp-companyName-TextBox"
+* Write "ValidPassword1." to "SingUp-Password1-TextBox"
+* Write "ValidPassword1." to "SingUp-Password2-TextBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+
+# Sing Up clear area <key>
+* Cleat Text <key>
+* Wait "1" seconds
+* Click to "Singup-Logo-Btn"
+
+# SingUp Butoon must be disable
+* Wait "2" seconds
+* Click to "SingUp-Singup-Btn"
+* Does Error Message Appear id not Fail message= "Blank Areas Did not couse a error message"
+
+# Singup Make Correct Password area wrong
+* Cleat Text "SingUp-Password2-TextBox"
+* Write "ValidButDiffednt1." to "SingUp-Password2-TextBox"
+* Wait "1" seconds
+
+# SingUp Click SingUp Btn
+* Wait "2" seconds
+* Click to "SingUp-Singup-Btn"
+
+# Singup Fill Passwords <text>
+* Cleat Text "SingUp-Password1-TextBox"
+* Write <text> to "SingUp-Password1-TextBox"
+* Cleat Text "SingUp-Password2-TextBox"
+* Write <text> to "SingUp-Password2-TextBox"
+
+# Sigup fill Emaill with uniq mail
+* Cleat Text "SingUp-Email-TextBox"
+* Wait "1" seconds
+* Singup Write text That in Txt to "SingUp-Email-TextBox" and add "@singUp.com"
+
+# Sigup fill Company name with uniq text
+* Cleat Text "SingUp-companyName-TextBox"
+* Wait "1" seconds
+* Singup Write text That in Txt to "SingUp-companyName-TextBox" and add "Company" not increase number
+
+# Singup Click Already Have An Accound Btn
+* Click Button With Text "Already have an account? Sign in"
+* Wait "2" seconds
+* Fail if "SingUp-Password2-TextBox" is exist fail message "BAck Button Does Not Work"
+
+# SingUp Open Google Login
+* Click to "SingUp-Google-Btn"
+* Wait "2" seconds
+* Open The Current Tab
+* Fail if "Singup-GoogleLogin-Check" is NOT exist fail message "Google Login Page Did Not Open"
+
+# Singup Open Apple Login
+* Click to "SingUp-Apple-Btn"
+* Wait "2" seconds
+* Open The Current Tab
+* Fail if "Singup-AppleLogin-Check" is NOT exist fail message "Apple Login Page Did Not Open"
+
+# Forgot Password <email>
+* Click Button With Text "Forgot password"
+* Wait "2" seconds
+* Write <email> to "ForgetPassword-email-TextBox"
+* Click to "ForgetPassword_reset_Btn"
+
+# Reset Password Page Check Elements
+* Fail if "ForgetPassword_email_textBox" is NOT exist fail message "forgot"
+* Fail if "ForgetPassword_email2_textBox" is NOT exist fail message "forgot"
+
+
+# Reset Password Set New password
+* Create and Set New Password "ForgetPassword_email_textBox"
+* Create and Set New Password "ForgetPassword_email2_textBox"
+* Click Button With Text "Reset password"
+
+# Reset Password Set New password with wrong confirm
+* Write text That in Txt to "ForgetPassword_email_textBox"
+* Write "not correct password" to "ForgetPassword_email2_textBox"
+* Click Button With Text "Reset password"
+* Does Error Message Appear id not Fail message= "Some Thing Wrong"
+
+# Reset Password Login with New Password
+* Wait "10" seconds
+* Cleat Text "Login_emailField_Tb"
+* Write "vrsautomationtest@gmail.com" to "Login_emailField_Tb"
+* Login With New Password "Login_passwordField_Tb"
+* Click to "Login_signinButton_Btn"
+* Wait "5" seconds
+* Fail if "Menu-SetCall-Btn" is NOT exist fail message "Unsuccesful login!!!"
+
+
+

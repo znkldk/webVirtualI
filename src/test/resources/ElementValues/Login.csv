@@ -1,0 +1,9 @@
+Keygfc,Type,Value
+Login_emailField_Tb,id,email_field
+Login_passwordField_Tb,id,password_field
+Login_signinButton_Btn,id,signin_button
+Mainpage_Menu_Items,xpath,"//*[@role=""menuitem""]"
+Main_Logout_Btn,xpath,"//*[@type=""button"" or @role=""menuitem""]//*[contains(text() ,'Logout')]"
+MAin_LogoutYes_Btn,xpath,"//*[@type=""button"" or @role=""menuitem""]//*[contains(text() ,'Yes')]"
+Main_CociesOk_Brn,xpath,"//*[@id=""CybotCookiebotDialogBodyButtonAccept""]"
+MAin_LogoutCancel_Btn,xpath,"//*[@type=""button"" or @role=""menuitem""]//*[contains(text() ,'Cancel')]"

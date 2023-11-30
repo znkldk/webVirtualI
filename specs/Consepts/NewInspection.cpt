@@ -1,0 +1,192 @@
+Created by znkldk on 4.01.2022
+
+This is a concept file with following syntax for each concept.
+# New inspection check All Items
+* Fail if "Survey-Client-Dd" is NOT exist fail message "Survey-Client-Dd Element cant found on new inspection window"
+* Fail if "Survey-Address-Dd" is NOT exist fail message "Survey-Address-Dd Element cant found on new inspection window"
+* Fail if "Survey-PoLicy-Dd" is NOT exist fail message "Survey-PoLicy-Dd Element cant found on new inspection window"
+* Fail if "Survey-surveyType-Dd" is NOT exist fail message "Survey-surveyType-Dd Element cant found on new inspection window"
+* Fail if "Survey-PolicyClaimNo-TxtBox" is NOT exist fail message "Survey-PolicyClaimNo-TxtBox Element cant found on new inspection window"
+* Fail if "Survey-Engineer-Dd" is NOT exist fail message "Survey-Engineer-Dd Element cant found on new inspection window"
+* Fail if "Survey-Date-Celendar" is NOT exist fail message "Survey-Date-Celendar Element cant found on new inspection window"
+* Fail if "Survey-StartTime-Clock" is NOT exist fail message "Survey-StartTime-Clock Element cant found on new inspection window"
+* Fail if "Survey-EndTime-Clock" is NOT exist fail message "Survey-EndTime-Clock Element cant found on new inspection window"
+* Fail if "Survey-TimeZone-Dd" is NOT exist fail message "Survey-TimeZone-Dd Element cant found on new inspection window"
+* Fail if "Survey-BrowseFile-Btn" is NOT exist fail message "Survey-BrowseFile-Btn Element cant found on new inspection window"
+* Fail if "Survey-SaveInspection-Btn" is NOT exist fail message "Survey-SaveInspection-Btn Element cant found on new inspection window"
+
+# Open New inspection window
+* Wait "5" seconds
+* Click to "Survey-newInspection-Btn"
+* Fail if "Survey-Client-Dd" is NOT exist fail message "new inspection page did not open"
+
+# New Inspection create new Inspection <formYType>
+* Choose "1" from "Survey-Client-Dd" dropdown
+* Choose "a" from "Survey-Address-Dd" dropdown
+* Choose <formYType> from "Survey-surveyType-Dd" dropdown
+* Choose "rank" from "Survey-Engineer-Dd" dropdown
+* Wait "5" seconds
+* Click to "Survey-SaveInspection-Btn"
+* Wait "1" seconds
+
+# New Inspection create new Inspection Parametric
+* Choose "000000TestClient" from "Survey-Client-Dd" dropdown
+* Choose "a" from "Survey-Address-Dd" dropdown
+* Choose parametric from "Survey-surveyType-Dd" dropdown
+* Choose "rank" from "Survey-Engineer-Dd" dropdown
+* Click to "Survey-SaveInspection-Btn"
+* Wait "1" seconds
+
+# New Inspection create new Inspection <formYType> with LAst Client
+* Choose "rank" from "Survey-Client-Dd" dropdown
+* Choose "a" from "Survey-Address-Dd" dropdown
+* Choose <formYType> from "Survey-surveyType-Dd" dropdown
+* Choose "rank" from "Survey-Engineer-Dd" dropdown
+* Click to "Survey-SaveInspection-Btn"
+* Wait "1" seconds
+
+# New Inspection create new Inspection <formYType> Static Risk engineer
+* Choose "1" from "Survey-Client-Dd" dropdown
+* Choose "a" from "Survey-Address-Dd" dropdown
+* Choose <formYType> from "Survey-surveyType-Dd" dropdown
+* Choose "Otomasyon" from "Survey-Engineer-Dd" dropdown
+* Click to "Survey-SaveInspection-Btn"
+* Wait "1" seconds
+
+# New Inspection mondatory field Check
+* Click to "Survey-SaveInspection-Btn"
+* Wait "1" seconds
+* Fail if "ESR-Client-Err" is NOT exist fail message "Inspection mondatory field Fail"
+* Fail if "ESR-Address-Err" is NOT exist fail message "Inspection mondatory field Fail"
+* Fail if "ESR-SurveyType-Err" is NOT exist fail message "Inspection mondatory field Fail"
+* Fail if "ESR-EnineerType-Err" is NOT exist fail message "Inspection mondatory field Fail"
+* Fail if "ESR-ClientLocation-Err" is NOT exist fail message "Inspection mondatory field Fail"
+
+# Inspection Edit page Elements Control
+* Fail if "Survey-Client-Dd-Disabled" is NOT exist fail message "element not disable!!!"
+* Fail if "Survey-Address-Dd-Disabled" is NOT exist fail message "element not disable!!!"
+* Fail if "Survey-PoLicy-Dd-Disabled" is NOT exist fail message "element not disable!!!"
+* Fail if "Survey-surveyType-Dd-Disabled" is NOT exist fail message "element not disable!!!"
+* Fail if "Survey-PolicyClaimNo-TxtBox-Disabled" is NOT exist fail message "element not disable!!!"
+* Fail if "Survey-Engineer-Dd-Disabled" is NOT exist fail message "element not disable!!!"
+* Fail if "Survey-Date-Celendar" is NOT exist fail message "Survey-Date-Celendar Element cant found on new inspection window"
+* Fail if "Survey-StartTime-Clock" is NOT exist fail message "Survey-StartTime-Clock Element cant found on new inspection window"
+* Fail if "Survey-EndTime-Clock" is NOT exist fail message "Survey-EndTime-Clock Element cant found on new inspection window"
+* Fail if "Survey-TimeZone-Dd" is NOT exist fail message "Survey-TimeZone-Dd Element cant found on new inspection window"
+* Fail if "Survey-BrowseFile-Btn" is NOT exist fail message "Survey-BrowseFile-Btn Element cant found on new inspection window"
+* Fail if "Survey-SaveInspection-Btn" is NOT exist fail message "Survey-SaveInspection-Btn Element cant found on new inspection window"
+* Fail if "Survey-Delete-Btn" is NOT exist fail message "ınspection page"
+
+# Inspection close edit page
+* Click to "Survey-Cancel-Btn"
+* Wait "2" seconds
+* Fail if "Survey-Delete-Btn" is exist fail message "ınspection edit page did not close"
+
+# Inspection StartCAll Page Elements Control
+* Wait "2" seconds
+* Fail if "SurveyCall-Client ID-TextBox" is NOT exist fail message "ınspection start call page"
+* Fail if "SurveyCall-CopyLink-CheckBox" is NOT exist fail message "ınspection start call page"
+* Fail if "SurveyCall-SendSms-CheckBox" is NOT exist fail message "ınspection start call page"
+* Fail if "SurveyCall-SendEmail-CheckBox" is NOT exist fail message "ınspection start call page"
+* Fail if "SurveyCall-Notes-Textbox" is NOT exist fail message "ınspection start call page"
+* Fail if "SurveyCall-Client-Textbox" is NOT exist fail message "ınspection start call page"
+* Fail if "SurveyCAll-StartCAll-Btn" is NOT exist fail message "ınspection start call page"
+
+# Inspection StartCall page Open Send Sms
+* Click to "SurveyCall-SendSms-CheckBox"
+* Wait "1" seconds
+* Fail if "SetCall-Contact Phone-TextBox" is NOT exist fail message "Inspection StartCall"
+
+# Inspection StartCall page Open Send email
+* Click to "SurveyCall-SendEmail-CheckBox"
+* Wait "1" seconds
+* Fail if "SetCall-Contact Email-TextBox" is NOT exist fail message "Inspection StartCall"
+
+# Inspection Start Call Fill Email
+* Write "cdknn.test@inbox.testmail.app" to "SetCall-Contact Email-TextBox"
+* Wait "1" seconds
+
+# Inspection StartCAll page Start Call
+* Click to "SurveyCAll-StartCAll-Btn"
+* Wait "5" seconds
+* Open The Current Tab
+
+# Inspection StartCAll page Start Call without wait
+* Click to "SurveyCAll-StartCAll-Btn"
+
+# Inspection StartCall Check Call Page did open
+* Open The Current Tab
+* Fail if "Call-Link-Text" is NOT exist fail message "Call Did now start !!!"
+
+# Inspection StartCall Check Sms Proper format
+* Click to "SurveyCall-SendSms-CheckBox"
+* Set Call Try Wrong Phone number
+
+# Inspection open celendar
+* Click to "Survey-Date-Celendar"
+* Wait "1" seconds
+
+# Inspection delete inspection unsuccesfull
+* Click to "Survey-Delete-Btn"
+* Wait "1" seconds
+* Does Error Message Appear id not Fail message= "Risk Engineer cant delete inspection"
+* Wait "2" seconds
+* Fail if "Survey-Delete-Btn" is NOT exist fail message "Edit page closed please check it"
+
+# Inspection delete inspection succesfull
+* Click to "Survey-Delete-Btn"
+* Wait "1" seconds
+* Wait "2" seconds
+* Fail if "Survey-Delete-Btn" is exist fail message "Edit page did not please check it"
+
+# Inspection Call Open Inspection <type>
+* Survey Choose <type> from "SurveyCall-OpenInspection-DD" dropdown
+* Wait "5" seconds
+* If key exist Click to "EST-Agree-Btn"
+
+#Inspection Check All risk engineers names in New Inspection Dd
+* Wait "2" seconds
+* Write "a" to "Survey-Engineer-Dd"
+* Wait "1" seconds
+* Cleat Text "Survey-Engineer-Dd"
+* Wait "1" seconds
+* Risk Engneer Check All risk Engineers names On CallerDropdown
+
+#Inspection Check All Clients names in New Inspection Dd
+* Wait "2" seconds
+* Write "a" to "Survey-Client-Dd"
+* Wait "1" seconds
+* Cleat Text "Survey-Client-Dd"
+* Wait "1" seconds
+* Inspection Check All Clients names On CallerDropdown
+
+# Inspection Detail Open Copy Form With Last Client
+* Choose "rank" from "Survey-Client-Dd" dropdown
+* Click to "Survey-CopyForm-Btn"
+* Wait "2" seconds
+* Does Grid Has the text "LastRiskEngineer"
+* Does Grid Has the text "Maxi - Business"
+* Click to "Survey-Copy-Btn"
+* Wait "1" seconds
+* Fail if "Survey-DisabledSurveyType-dd" is NOT exist fail message "Survey type must be dissabled"
+* Fail if "Survey-Clear-Btn" is NOT exist fail message "new Inspection"
+
+# Inspection Detail Open Copy Form With Last Client Clear
+* Click to "Survey-Clear-Btn"
+* Wait "1" seconds
+
+# ID choose last risk engineer and save inspection
+* Choose "rank" from "Survey-Engineer-Dd" dropdown
+* Click to "Survey-SaveInspection-Btn"
+* Wait "1" seconds
+
+# Inspection Detail Open Copy Form With Last Client Unsuccesfull
+* Choose "rank" from "Survey-Client-Dd" dropdown
+* Wait "1" seconds
+* Click to "Survey-CopyForm-Btn"
+* Wait "2" seconds
+* Fail if "ID-NoInspections-Text" is NOT exist fail message "Previously Completed Inspections must be empty but not!!"
+
+# Create Risk Engineer and Assign Inspection with This <form>
+* Create New "risk engineer" With Post Method
+* Create New Inspection Form Name <form> With Post

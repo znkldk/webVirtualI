@@ -1,0 +1,207 @@
+Created by znkldk on 27.01.2022
+
+This is a concept file with following syntax for each concept.
+# Call Agenda Check All Page Items day mode
+* Fail if "CallAgenda-PreviousDay-Btn" is NOT exist fail message "CallAgenda-PreviousDay-Btn CAnt found in call agenda "
+* Fail if "CallAgenda-NextDay-Btn" is NOT exist fail message "CallAgenda-NextDay-Btn CAnt found in call agenda "
+* Fail if "CallAgenda-Today-Btn" is NOT exist fail message "CallAgenda-Today-Btn CAnt found in call agenda "
+* Fail if "CallAgenda-day view-Btn" is NOT exist fail message "CallAgenda-day view-Btn CAnt found in call agenda "
+* Fail if "CallAgenda-week view-Btn" is NOT exist fail message "CallAgenda-week view-Btn CAnt found in call agenda "
+* Fail if "CallAgenda-month view-Btn" is NOT exist fail message "CallAgenda-month view-Btn CAnt found in call agenda "
+* Fail if "CallAgenda-Celendar-Celendar" is NOT exist fail message "CallAgenda-Celendar-Celendar CAnt found in call agenda "
+
+# CAll Agenda open Day mode
+* Click to "CallAgenda-day view-Btn"
+* Wait "1" seconds
+
+# CAll Agenda open month mode
+* Click to "CallAgenda-month view-Btn"
+* Wait "1" seconds
+
+# CAll Agenda open week mode
+* Click to "CallAgenda-week view-Btn"
+* Wait "2" seconds
+
+# Call Agenda Add a Date Day Mode
+* Click to "CallAgenda-8Am-Celendar"
+* Wait "1" seconds
+* Fail if "CallAgenda-videoCallAppointment-Title" is NOT exist fail message "Date window did not open"
+* Click Button With Text "Save"
+* Does Success Message Appear if not Fail message "Unsuccesfull adding date!!"
+* Fail if "CallAgenda-eventTime-Control" is NOT exist fail message "cant observe the date on celendar"
+
+# CAll Agenda Check date in Day mode
+* Call Agenda Check Date for Day mode add "0"
+
+# CAll Agenda Open nextday
+* Wait "1" seconds
+* Click to "CallAgenda-NextDay-Btn"
+
+# CAll Agenda Open previous day
+* Wait "1" seconds
+* Click to "CallAgenda-PreviousDay-Btn"
+
+# CAll Agenda Open next month
+* Wait "1" seconds
+* Click to "CallAgenda-Next month-Btn"
+
+# CAll Agenda Open previous month
+* Wait "1" seconds
+* Click to "CallAgenda-Previousmonth-Btn"
+
+# CAll Agenda Open nextweek
+* Wait "1" seconds
+* Click to "CallAgenda-Nextweek-Btn"
+
+# CAll Agenda Open previous week
+* Wait "1" seconds
+* Click to "CallAgenda-Previousweek-Btn"
+
+# CAll Agenda Check Is today btn DISABLED
+* Wait "1" seconds
+* Fail if "CallAgenda-DisableToday-Btn" is NOT exist fail message "Today btn must be disable"
+
+# CAll Agenda Check Is today btn ENABLED
+* Wait "1" seconds
+* Fail if "CallAgenda-DisableToday-Btn" is exist fail message "Today btn must be disable"
+
+# Call Agenda Check All Items on Call Appointment
+* Fail if "CallAppointment-Appointment Info-Tab" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-Title-Text" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-Appointment Info-Tab" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-CallerName-TextBox" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-StartTime-Clock" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-EndTime-Clock" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-SubjectOfMeeting-TextBox" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-Off-CheckBox" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-Before15-CheckBox" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-Before30-CheckBox" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-Before1-CheckBox" is NOT exist fail message "In Video Call Appointment Window"
+* Fail if "CallAppointment-Close-Btn" is NOT exist fail message "In Video Call Appointment Window"
+
+# CAll Agenda <nameOfDAy> and <clock> click week mode
+* Call Agenda Click day <nameOfDAy> oclock <clock> in week mode
+* Wait "2" seconds
+* Fail if "CallAppointment-Title-Text" is NOT exist fail message "Appointment Window Did Not Open"
+
+# Call Agenda click save btn
+* Wait "1" seconds
+* Click to "CallAgenda-save-btn"
+* Wait "1" seconds
+* Does Success Message Appear if not Fail message "saving a Appointment"
+* Wait "5" seconds
+
+# Call Agenda Set hour <startTime> <endTime>
+* Call Agenda Choose <startTime> from "CallAppointment-StartTime-Clock" dropdown
+* Call Agenda Choose <endTime> from "CallAppointment-EndTime-Clock" dropdown
+
+# Call Agenda set Subject Meeting <subjectMeeting>
+* Cleat Text "CallAppointment-SubjectOfMeeting-TextBox"
+* Write "Subject meeting" to "CallAppointment-SubjectOfMeeting-TextBox"
+
+# Call Agenda click update btn
+* Wait "1" seconds
+* Click to "CallAppointment-Update-Btn"
+* Wait "3" seconds
+
+# Call Agenda Admin Click Save Button
+* Wait "1" seconds
+* Click to "CallAppointment-Save-Btn"
+* Wait "3" seconds
+
+# Call Agenda delete Appointment
+* Click to "CallAppointment-Delete-Btn"
+* Click to "CallAgenda-Yes-Btn"
+* Wait "1" seconds
+* Does Success Message Appear if not Fail message "deleting a Appointment"
+
+# Call Agenda Set Call Direcly Check Elements
+* Fail if "SetCall-SetCallDirectly-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-SetCallWithEngineers-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-SetCallWithClient-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-ContactName-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-CompanyName-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Notes-Textbox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Contact Phone-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Contact Email-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "CallAgenda-save-btn" is NOT exist fail message "Call Agenda Set Call -"
+
+# Call Agenda Set Call With Engineers Check Elements
+* Fail if "SetCall-SetCallDirectly-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-SetCallWithEngineers-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-SetCallWithClient-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Engineer-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Notes-Textbox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Contact Phone-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Contact Email-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "CallAgenda-save-btn" is NOT exist fail message "Call Agenda Set Call -"
+
+# Call Agenda Set Call With Client Check Elements
+* Fail if "SetCall-SetCallDirectly-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-SetCallWithEngineers-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-SetCallWithClient-CheckBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Client-Textbox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Notes-Textbox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Contact Phone-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "SetCall-Contact Email-TextBox" is NOT exist fail message "Call Agenda Set Call -"
+* Fail if "CallAgenda-save-btn" is NOT exist fail message "Call Agenda Set Call -"
+
+# Call Agenda Open Add Contact Call Page
+* Click to "CallAppointment-AddContact-Btn"
+* Wait "1" seconds
+* Fail if "SetCall-SetCallDirectly-CheckBox" is NOT exist fail message "set Call Direcly page did not open"
+
+# Call Agenda Open Set Call With Engineers page
+*Click to "SetCall-SetCallWithEngineers-CheckBox"
+* Wait "1" seconds
+* Fail if "SetCall-SetCallDirectly-CheckBox" is NOT exist fail message "set Call Direcly page did not open"
+
+# Call Agenda Open Set Call With Client page
+*Click to "SetCall-SetCallWithClient-CheckBox"
+* Wait "1" seconds
+* Fail if "SetCall-Client-Textbox" is NOT exist fail message "set Call with Client page did not open"
+
+# Call Agenda Add Participant Directly <ContactName> <Mail>
+* Cleat Text "SetCall-ContactName-TextBox"
+* Write <ContactName> to "SetCall-ContactName-TextBox"
+* Cleat Text "SetCall-Contact Email-TextBox"
+* Write <Mail> to "SetCall-Contact Email-TextBox"
+* Cleat Text "SetCall-Contact Phone-TextBox"
+* Write "+905555555555" to "SetCall-Contact Phone-TextBox"
+* Wait "4" seconds
+* Click to "CallAgenda-save-btn"
+
+# Call Agenda Add Participant withEngineers <EngineerName> <Mail>
+* Choose <EngineerName> from "SetCall-Engineer-TextBox" dropdown
+* Cleat Text "SetCall-Contact Email-TextBox"
+* Wait "1" seconds
+* Write <Mail> to "SetCall-Contact Email-TextBox"
+* Click to "CallAgenda-save-btn"
+
+# Call Agenda Add Participant with Client <clientName> <Mail>
+* Write <clientName> to "SetCall-Client-Textbox"
+* Choose <clientName> from "SetCall-Client-Textbox" dropdown
+* Cleat Text "SetCall-Contact Email-TextBox"
+* Wait "1" seconds
+* Write <Mail> to "SetCall-Contact Email-TextBox"
+* Click to "CallAgenda-save-btn"
+
+# CAll Agenta Open Go to call page
+* Click to "CallAppointment-GoCall-Btn"
+* Wait "2" seconds
+* Open The Current Tab
+* Wait "2" seconds
+* Fail if "SetCall-ContactName-TextBox" is NOT exist fail message "Set Call PAge Did not open"
+
+# Call Agenda Check mail formad
+* Write "znkldk" to "SetCall-ContactName-TextBox"
+* Call Agenda Try Wrong Email Addesses
+
+# Call Agenda Check sms formad
+* Write "testsmss" to "SetCall-ContactName-TextBox"
+* Call Agenda Try Wrong Phone number
+
+# Call Agenda Select Last Risk Engineer On Caller dd
+* Wait "1" seconds
+*Choose "rank" from "CallAppointment-CallerName-TextBox" dropdown
+* Wait "1" seconds

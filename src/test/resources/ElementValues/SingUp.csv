@@ -1,0 +1,23 @@
+dashboardd,xpath,"//*[@type=""but"
+SingUp-Email-TextBox,id,email_field
+SingUp-Password1-TextBox,id,password_field
+SingUp-Password2-TextBox,id,confirm_password_field
+SingUp-Phone-TextBox,xpath,"//*[@name=""telephone""]"
+SingUp-companyName-TextBox,id,company_name_field
+SingUp-Singup-Btn,id,signup_button
+SingUp-Google-Btn,xpath,"//*[contains(@src,""google.svg"")]"
+SingUp-Apple-Btn,xpath,"//*[contains(@src,""Apple"")]"
+SingUp-Singin-Btn,xpath,//span[.='Already have an account? Sign in']
+SingUp-Privacypolicy-btn,xpath,//*[.='Privacy Policy']
+SingUp-TermsOfService-btn,xpath,//*[.='Terms of Service']
+Login-SingUp-Btn,id,signup_button
+Singup-Logo-Btn,xpath,"//*[@class=""logo-img""]"
+Singup-DisabledSingup-Check,xpath,"//*[@id=""signup_button"" and @disabled=""disabled""]"
+Singup-email-Err,xpath,"//*[contains(text(),'valid e')]"
+Singup-GoogleLogin-Check,xpath,//*[.='Email or phone']
+Singup-AppleLogin-Check,xpath,"//*[contains(text(),'apple ')]"
+ForgetPassword-email-TextBox,xpath,"//*[@id=""email_field""]"
+ForgetPassword_reset_Btn,xpath,"//*[@id=""reset_button""]"
+ForgetPassword_email_textBox,id,password_field
+ForgetPassword_email2_textBox,id,confirm_field
+,,

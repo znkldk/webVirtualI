@@ -1,0 +1,45 @@
+Created by znkldk on 11.04.2022
+
+This is a concept file with following syntax for each concept.
+# Edit User Check All Elements
+* Fail if "EditUser-Firstuser-TextBox" is NOT exist fail message "Edit User"
+* Fail if "EditUser-LastName-TextBox" is NOT exist fail message "Edit User"
+* Fail if "EditUser-PhoneNumber-TextBox" is NOT exist fail message "Edit User"
+* Fail if "EditUser-TimeZone-Dd" is NOT exist fail message "Edit User"
+* Fail if "EditUser-NewPassword-TextBox" is NOT exist fail message "Edit User"
+* Fail if "EditUser-ConfirmPassword-TextBox" is NOT exist fail message "Edit User"
+* Fail if "EditUser-Save-Btn" is NOT exist fail message "Edit User"
+* Fail if "EditUser-Close-Btn" is NOT exist fail message "Edit User"
+* Fail if "EditUser-Close-Icon" is NOT exist fail message "Edit User"
+
+# Edit User Open Edit User Page
+* Click to "Edituser-Name-Text"
+* Fail if "EditUser-Firstuser-TextBox" is NOT exist fail message "Edit User page did not open"
+
+# Edit User Change Name
+* Cleat Text "EditUser-Firstuser-TextBox"
+* Cleat Text "EditUser-LastName-TextBox"
+* Write "edited Name" to "EditUser-Firstuser-TextBox"
+* Write "edited last Name" to "EditUser-LastName-TextBox"
+* Click to "EditUser-Save-Btn"
+* Does Success Message Appear if not Fail message "-"
+* Wait "1" seconds
+* Sing Up if Text Not Exist Fail "edited Name" "unsuccessful change name"
+* Sing Up if Text Not Exist Fail "edited last Name" "unsuccessful change name"
+
+# Edit User Fill Password Area <password> <confirmPassword> <currentPassword>
+* Write <password> to "EditUser-NewPassword-TextBox"
+* Write <confirmPassword> to "EditUser-ConfirmPassword-TextBox"
+* Wait "1" seconds
+* Fail if "EditUser-CurrentPassword-TextBox" is NOT exist fail message "currentPAssword Area DidNot Appear"
+* Write <currentPassword> to "EditUser-CurrentPassword-TextBox"
+* Click to "EditUser-Save-Btn"
+* Wait "2" seconds
+
+# Edit User Close page
+* Click to "EditUser-Close-Btn"
+* Wait "1" seconds
+* Fail if "EditUser-Firstuser-TextBox" is exist fail message "page did not close"
+
+
+

@@ -1,0 +1,37 @@
+Created by krybyrz on 31.08.2022
+
+This is a concept file with following syntax for each concept.
+
+# Risk Engineer Check Account
+* Logout
+* Write email to "Login_emailField_Tb"
+* Write "123123" to "Login_passwordField_Tb"
+* Click to "Login_signinButton_Btn"
+* Wait "6" seconds
+* Fail if "Login_signinButton_Btn" is exist fail message "Unsuccesful login!!!"
+
+# Risk Engineer Filter test
+* Write "Otomasyon" to "CallHistory-Filter-Txtbox"
+* Wait "4" seconds
+* Does All Grid Lines Has The "Otomasyon" if not fail "Risk Engineer Filter Test"
+
+# Risk Engineer <menu> Menu Check
+* Go to <menu>
+* Close menu field
+* Open menu field
+
+# Risk Engineer SetCall Menu Check
+* Go to SetCall
+* Close menu field
+* Open menu field
+
+# Risk Eng make state passive
+* Choose "Pass" from "RiskEng-State-DD" dropdown
+* Click to "RiskEng-Save-Btn"
+* Wait "1" seconds
+* Does Success Message Appear if not Fail message "Cant create New Risk Engineer"
+
+# Risk Eng Click Inactive Check box
+* Wait "2" seconds
+* Click to "RiskEng-InActife-Checkbox"
+* Wait "1" seconds
