@@ -127,7 +127,9 @@
                         <configuration>
                             <specsDir>specs</specsDir>
                         </configuration>
-
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
