@@ -136,5 +136,5 @@ public class Driver {
             "    \"phone\": \"string\",\n" +
             "    \"userStatus\": 0\n" +
             "  }\n" +
-            "]"
+            "]";
 }
